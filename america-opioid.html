@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Everyday Americans: The Opioid Crisis — Phil Reevell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ocean:#0b1c2a;--ocean-mid:#0f2235;
+  --parch:#f2e8cc;--parch-dim:rgba(242,232,204,0.65);--parch-mute:rgba(242,232,204,0.32);
+  --gilt:#c69030;--gilt-lt:#e0ac3a;--white:#f8f4ea;--ink:#1a1208;
+  --red:#9e2a1a;--red-lt:#c03520;
+  --rule:rgba(198,144,48,0.32);--rule-lt:rgba(198,144,48,0.12);
+  --sans:'DM Sans',system-ui,sans-serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --display:'Libre Baskerville',Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#f5f0e8;font-family:var(--serif);color:var(--ink);overflow-x:hidden;}
+
+nav{position:sticky;top:0;z-index:200;background:#0f0d0a;border-bottom:2px solid var(--red);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.nav-logo{font-family:var(--display);font-style:italic;font-size:1.05rem;color:var(--gilt);text-decoration:none;display:flex;align-items:baseline;gap:8px;}
+.nav-logo em{font-style:normal;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--parch-mute);font-weight:300;}
+.nav-back{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--parch-mute);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.nav-back::before{content:"←";}
+.nav-back:hover{color:var(--gilt);}
+
+/* HERO — dark, map-grid texture */
+.article-hero{
+  background:var(--ocean);
+  position:relative;overflow:hidden;
+  padding:80px 64px 64px;
+  border-bottom:1px solid rgba(158,42,26,0.3);
+}
+.article-hero::before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(42,85,112,0.08) 1px,transparent 1px),linear-gradient(90deg,rgba(42,85,112,0.08) 1px,transparent 1px);
+  background-size:50px 42px;pointer-events:none;
+}
+.hero-content{position:relative;z-index:1;max-width:680px;}
+.article-strand{font-family:var(--sans);font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--red-lt);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.article-strand::before{content:"";display:inline-block;width:20px;height:1px;background:var(--red-lt);}
+.article-title{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4.5vw,3.8rem);line-height:0.95;color:var(--white);margin-bottom:8px;letter-spacing:-0.01em;}
+.article-title em{display:block;font-style:italic;font-weight:400;color:var(--gilt);font-size:0.65em;margin-top:8px;}
+.article-deck{font-family:var(--serif);font-size:1.02rem;font-style:italic;color:var(--parch-dim);line-height:1.65;max-width:580px;margin-bottom:24px;}
+.article-meta{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.15em;color:rgba(247,243,236,0.4);display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.article-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--red-lt);opacity:0.5;}
+
+/* BBC link block */
+.bbc-block{
+  background:rgba(158,42,26,0.08);
+  border-left:3px solid var(--red);
+  padding:16px 20px;
+  margin-bottom:36px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.bbc-label{font-family:var(--sans);font-size:0.57rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--red-lt);font-weight:600;margin-bottom:3px;}
+.bbc-title{font-family:var(--display);font-size:0.92rem;font-weight:700;color:var(--ink);}
+.bbc-btn{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;font-weight:600;background:var(--red);color:white;padding:9px 18px;text-decoration:none;white-space:nowrap;transition:background 0.2s;flex-shrink:0;}
+.bbc-btn:hover{background:var(--red-lt);}
+
+/* BODY */
+.article-body{max-width:1100px;margin:0 auto;padding:56px 48px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start;}
+.article-text p{font-family:var(--serif);font-size:1rem;line-height:1.82;color:rgba(26,18,8,0.82);margin-bottom:20px;}
+.article-text p:first-child::first-letter{font-family:var(--display);font-size:3.2rem;font-weight:700;float:left;line-height:0.85;margin:4px 8px 0 0;color:var(--red);}
+
+/* Photo grid */
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0;}
+.photo-item img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;}
+.photo-item-placeholder{width:100%;aspect-ratio:4/3;background:rgba(158,42,26,0.06);border:1px dashed rgba(158,42,26,0.2);display:flex;align-items:center;justify-content:center;}
+.photo-item-placeholder span{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(158,42,26,0.35);}
+.photo-caption{font-family:var(--sans);font-size:0.68rem;color:rgba(26,18,8,0.4);letter-spacing:0.08em;margin-top:6px;font-style:italic;}
+
+/* Pull quote */
+.pull-quote{border-left:3px solid var(--red);padding:16px 20px;margin:28px 0;background:rgba(158,42,26,0.04);}
+.pull-quote p{font-family:var(--display);font-size:1.02rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0;}
+.pull-quote-attr{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(26,18,8,0.35);margin-top:8px;}
+
+/* Sidebar */
+.article-sidebar{position:sticky;top:72px;}
+.sidebar-block{background:white;border:1px solid rgba(26,18,8,0.08);padding:24px;margin-bottom:16px;}
+.sidebar-block-label{font-family:var(--sans);font-size:0.57rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gilt);font-weight:600;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(26,18,8,0.08);}
+.sidebar-block p{font-family:var(--serif);font-size:0.85rem;color:rgba(26,18,8,0.55);line-height:1.6;margin-bottom:10px;font-style:italic;}
+.sidebar-block p:last-of-type{margin-bottom:0;}
+.sidebar-link{display:block;margin-top:12px;font-family:var(--sans);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:1px solid rgba(158,42,26,0.3);padding-bottom:2px;transition:color 0.2s;font-weight:500;}
+.sidebar-link:hover{color:var(--red-lt);}
+.sidebar-cook{background:var(--ocean);border:1px solid var(--rule-lt);padding:24px;}
+.sidebar-cook-label{font-family:var(--sans);font-size:0.57rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gilt);font-weight:600;margin-bottom:8px;}
+.sidebar-cook-title{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--parch);margin-bottom:8px;line-height:1.2;}
+.sidebar-cook p{font-family:var(--serif);font-size:0.82rem;font-style:italic;color:var(--parch-mute);line-height:1.55;margin-bottom:14px;}
+.sidebar-cook-btn{display:block;font-family:var(--sans);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;color:var(--gilt);text-decoration:none;border-bottom:1px solid rgba(198,144,48,0.3);padding-bottom:2px;}
+.sidebar-cook-btn:hover{color:var(--gilt-lt);}
+
+footer{background:#0f0d0a;border-top:2px solid var(--red);padding:32px 48px;display:flex;align-items:center;justify-content:space-between;}
+.footer-brand{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--gilt);}
+.footer-links{display:flex;gap:24px;list-style:none;}
+.footer-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,243,236,0.3);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gilt);}
+
+@media(max-width:900px){
+  .article-hero{padding:48px 28px 40px;}
+  .article-body{grid-template-columns:1fr;padding:40px 28px;}
+  .article-sidebar{position:static;}
+  .photo-grid{grid-template-columns:1fr;}
+  .bbc-block{flex-direction:column;align-items:flex-start;}
+  footer{flex-direction:column;gap:16px;padding:28px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://philreevell.com" class="nav-logo">Phil Reevell <em>Documentary</em></a>
+  <a href="https://philreevell.com#america" class="nav-back">America</a>
+</nav>
+
+<div class="article-hero">
+  <div class="hero-content">
+    <div class="article-strand">America · Social</div>
+    <h1 class="article-title">Everyday Americans<em>The Opioid Crisis</em></h1>
+    <p class="article-deck">Reporting from Louisville, Kentucky on record levels of deaths from opioid addiction — working with the Courier Journal newspaper for BBC World Service.</p>
+    <div class="article-meta">
+      <span>2018</span>
+      <span class="article-meta-dot"></span>
+      <span>BBC World Service</span>
+      <span class="article-meta-dot"></span>
+      <span>Produced by Phil Reevell</span>
+      <span class="article-meta-dot"></span>
+      <span>Rights held independently</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-body">
+  <div class="article-main">
+
+    <div class="bbc-block">
+      <div>
+        <div class="bbc-label">Listen</div>
+        <div class="bbc-title">Everyday Americans — The Opioid Crisis · BBC World Service</div>
+      </div>
+      <a href="https://www.bbc.co.uk/programmes/w27vq17q" class="bbc-btn" target="_blank">BBC Sounds →</a>
+    </div>
+
+    <div class="article-text">
+      <p>In 2018 America was experiencing record levels of deaths from opioid addiction. Everyday Americans was a project for the BBC World Service — a series of one-hour radio documentaries produced in partnership with the Courier Journal newspaper in Louisville, Kentucky, one of the cities at the centre of the crisis.</p>
+
+      <p>The series went beyond the statistics. We met the people caught in the epidemic — the campaigners, the ER doctors, the families. Louisville's hospitals were overwhelmed. The pharmaceutical companies that had flooded rural America with prescription painkillers were beginning to face legal action. The communities were trying to find their way through.</p>
+    </div>
+
+    <!-- Photo grid — upload images from existing site -->
+    <div class="photo-grid">
+      <div class="photo-item">
+        <div class="photo-item-placeholder" id="photo1">
+          <span>Emily Walden — upload image</span>
+        </div>
+        <div class="photo-caption">Emily Walden addresses a meeting — campaigner against pharmaceutical companies</div>
+      </div>
+      <div class="photo-item">
+        <div class="photo-item-placeholder" id="photo2">
+          <span>ER doctor — upload image</span>
+        </div>
+        <div class="photo-caption">The impact of opioid overdoses on Louisville's hospitals</div>
+      </div>
+    </div>
+
+    <div class="article-text">
+      <div class="pull-quote">
+        <p>"The pills were legal. The doctors prescribed them. And then one day they weren't available any more — and people turned to heroin instead."</p>
+        <div class="pull-quote-attr">Louisville, Kentucky · 2018</div>
+      </div>
+
+      <p>Emily Walden became one of the most prominent voices in the campaign against the pharmaceutical companies whose aggressive marketing of opioid painkillers contributed to the epidemic. Her testimony — and the testimony of others like her — was part of the legal cases that eventually led to billion-dollar settlements.</p>
+
+      <p>The series was produced working directly with journalists at the Courier Journal, one of America's great regional papers, which had been covering the crisis from the ground up for years before it became a national story. Their knowledge of Louisville and the surrounding counties shaped the reporting.</p>
+    </div>
+
+  </div>
+
+  <div class="article-sidebar">
+
+    <div class="sidebar-block">
+      <div class="sidebar-block-label">The series</div>
+      <p>Everyday Americans was a BBC World Service production examining the opioid crisis through the lives of people in Louisville, Kentucky. Produced by Phil Reevell in partnership with the Courier Journal newspaper.</p>
+      <a href="https://www.bbc.co.uk/programmes/w27vq17q" class="sidebar-link" target="_blank">Listen on BBC Sounds →</a>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-block-label">Context</div>
+      <p>In 2017 the US declared the opioid epidemic a national public health emergency. Over 70,000 Americans died of drug overdoses that year — the majority opioid-related. Kentucky was among the worst-affected states.</p>
+    </div>
+
+    <div class="sidebar-block">
+      <div class="sidebar-block-label">Also in America</div>
+      <p>US Local News 2024 — Gary O'Donoghue on small-town papers during a divisive election.</p>
+      <a href="america-localnews.html" class="sidebar-link">Read more →</a>
+    </div>
+
+    <div class="sidebar-cook">
+      <div class="sidebar-cook-label">Current series</div>
+      <div class="sidebar-cook-title">Cook in the Pacific: Then and Now</div>
+      <p>Nine episodes tracing Cook's three voyages and what they made of the world.</p>
+      <a href="https://cookinthepacific.pages.dev" class="sidebar-cook-btn" target="_blank">Explore →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Phil Reevell</div>
+  <ul class="footer-links">
+    <li><a href="https://philreevell.com">Home</a></li>
+    <li><a href="https://philreevell.com#america">America</a></li>
+    <li><a href="https://philreevell.com#about">About</a></li>
+    <li><a href="https://cookinthepacific.pages.dev">Cook in the Pacific</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
