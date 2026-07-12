@@ -1283,6 +1283,52 @@ footer {
   border-bottom-color: transparent !important;
   background: white !important;
 }
+
+/* Cook episode preview list */
+.cook-ep-list {
+  margin-bottom: 28px;
+  border-top: 1px solid var(--rule-lt);
+}
+.cook-ep-item {
+  display: grid;
+  grid-template-columns: 36px 1fr auto;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--rule-lt);
+  gap: 14px;
+}
+.cook-ep-num {
+  font-family: var(--display);
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 700;
+  color: rgba(198,144,48,0.25);
+  line-height: 1;
+  text-align: right;
+}
+.cook-ep-title {
+  font-family: var(--display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.cook-ep-status {
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+.cook-ep-status.coming {
+  color: rgba(242,232,204,0.3);
+  border: 1px solid rgba(198,144,48,0.15);
+}
+.cook-ep-status.july {
+  background: rgba(198,144,48,0.15);
+  color: var(--gilt);
+}
 </style>
 </head>
 <body>
@@ -1334,6 +1380,23 @@ footer {
       <p>I make long-form audio documentaries — for the BBC, and independently. My work covers the stories that take time: American politics, landscape and place, historical consequence.</p>
       <p>Cook in the Pacific began in early 2026 when I found myself in Suva, Fiji, with two months and two books. </p>
       
+      <div class="cook-ep-list">
+        <div class="cook-ep-item">
+          <div class="cook-ep-num">1</div>
+          <div class="cook-ep-title">Arcadia</div>
+          <div class="cook-ep-status july">July 2026</div>
+        </div>
+        <div class="cook-ep-item">
+          <div class="cook-ep-num">2</div>
+          <div class="cook-ep-title">Endeavour</div>
+          <div class="cook-ep-status coming">Coming</div>
+        </div>
+        <div class="cook-ep-item">
+          <div class="cook-ep-num">3</div>
+          <div class="cook-ep-title">The Instruments</div>
+          <div class="cook-ep-status coming">Coming</div>
+        </div>
+      </div>
       <a href="https://cookinthepacific.pages.dev#subscribe" class="btn-primary" style="margin-right:16px;">Coming soon — follow updates</a>
       <a href="#" class="btn-ghost" style="color: var(--parch-dim); border-color: var(--rule);">Full biography →</a>
     </div>
