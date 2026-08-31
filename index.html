@@ -1329,6 +1329,45 @@ footer {
   background: rgba(198,144,48,0.15);
   color: var(--gilt);
 }
+
+/* Cook dropdown nav */
+.nav-dropdown {
+  position: relative;
+}
+.nav-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(7,15,24,0.98);
+  border: 1px solid var(--rule);
+  min-width: 220px;
+  z-index: 300;
+  padding: 8px 0;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  display: block;
+}
+.nav-dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  font-family: var(--sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(242,232,204,0.7);
+  text-decoration: none;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-dropdown-item:hover {
+  color: var(--gilt);
+  background: rgba(198,144,48,0.06);
+}
+.nav-dropdown-trigger::after {
+  content: " ▾";
+  font-size: 0.5rem;
+}
 </style>
 </head>
 <body>
@@ -1343,7 +1382,16 @@ footer {
 <nav>
   <a href="/" class="nav-brand">Phil Reevell <em>Documentary</em></a>
   <ul class="nav-links">
-    <li><a href="#cook" class="active">Cook in the Pacific</a></li>
+    <li class="nav-dropdown">
+    <a href="https://philreevell-star.github.io/cookinthepacific/" class="nav-dropdown-trigger">Cook in the Pacific</a>
+    <div class="nav-dropdown-menu">
+      <a href="https://philreevell-star.github.io/cookinthepacific/" class="nav-dropdown-item">Episodes</a>
+      <a href="https://philreevell-star.github.io/cookinthepacific/map.html" class="nav-dropdown-item">Maps</a>
+      <a href="https://philreevell-star.github.io/cookinthepacific/voyage2_arc_map.html" class="nav-dropdown-item">Second Voyage Arc</a>
+      <a href="https://philreevell-star.github.io/cookinthepacific/cook_return_visits_v2.html" class="nav-dropdown-item">Return Visits</a>
+      <a href="https://philreevell-star.github.io/cookinthepacific/vatoa_turtle_island_annotated.html" class="nav-dropdown-item">Vatoa — Turtle Island</a>
+    </div>
+  </li>
     <li><a href="#america">America</a></li>
     <li><a href="#landscapes">Landscapes</a></li>
     
@@ -1351,7 +1399,7 @@ footer {
     <li><a href="#writing">Writing</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="https://philreevell-star.github.io/cookinthepacific/" class="nav-cta">Follow the series</a>
+  <a href="https://philreevell-star.github.io/cookinthepacific/" class="nav-cta">Cook in the Pacific</a>
 </nav>
 
 <!-- HERO — Cook Feature -->
