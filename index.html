@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inquiry — Phil Reevell</title>
+<title>Phil Reevell — Inquiry</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -54,23 +54,10 @@ nav {
 .nav-brand {
   font-family: var(--display);
   font-style: italic;
-  font-size: 1.8rem;
+  font-size: 1.05rem;
   color: var(--gilt);
   text-decoration: none;
-  letter-spacing: 0.01em;
-  line-height: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-.nav-brand .nav-brand-name {
-  font-family: var(--sans);
-  font-style: normal;
-  font-size: 0.58rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(242,232,204,0.5);
-  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 .nav-brand em {
   font-style: normal;
@@ -497,6 +484,14 @@ section { position: relative; }
   font-style: italic;
   color: var(--gilt);
 }
+.about-subhead {
+  display: block;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gilt);
+  font-size: 0.72em;
+  margin-top: 6px;
+}
 .identity-text p {
   font-family: var(--serif);
   font-size: 1rem;
@@ -667,7 +662,6 @@ footer {
 }
 .footer-brand {
   font-family: var(--display);
-  font-style: italic;
   font-style: italic;
   font-size: 1.3rem;
   color: var(--gilt);
@@ -1420,7 +1414,7 @@ footer {
 
 <!-- Nav -->
 <nav>
-  <a href="/" class="nav-brand"><span class="nav-brand-name">Phil Reevell&#8217;s</span><em>Inquiry</em></a>
+  <a href="/" class="nav-brand">Phil Reevell <em>Inquiry</em></a>
   <ul class="nav-links">
     <li><a href="https://philreevell-star.github.io/cookinthepacific/" target="_blank">Cook in the Pacific</a></li>
     <li><a href="https://philreevell-star.github.io/cookinthepacific/map.html" target="_blank">Maps</a></li>
@@ -1458,7 +1452,7 @@ footer {
   <div class="identity-inner">
     <div class="identity-text">
       <div class="eyebrow">About</div>
-      <h2><em>Inquiry</em> — independent journalism &amp; audio</h2>
+      <h2>Inquiry<span class="about-subhead">Documentary journalism, independent</span></h2>
       <p>I’ve produced many long-form audio documentaries and podcasts for the BBC and independently. When I had the chance to spend several months in Fiji in the Pacific, I saw it as a chance to work on a new project.</p>
       <a href="https://philreevell-star.github.io/cookinthepacific/" class="btn-primary" style="margin-right:16px;">Cook in the Pacific →</a>
     </div>
@@ -1544,8 +1538,9 @@ footer {
   <div class="flag-bg"></div>
   <div class="america-inner">
     <div class="america-content">
-      <div class="america-eyebrow">Inquiry: America</div>
+      <div class="america-eyebrow">Ongoing strand</div>
       <h2 class="america-title">America</h2>
+      <div style="font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--gilt); margin-bottom: 14px;">Inquiry: America</div>
       <p class="america-desc">Politics, economics, and culture — reported from the ground up. A decade of dispatches from a country under pressure.</p>
       <div class="america-coming">
         <div class="america-coming-label">Featured · BBC World Service 2024</div>
@@ -1625,8 +1620,8 @@ footer {
 
 <footer id="contact">
   <div>
-    <div class="footer-brand"><em>Inquiry</em></div>
-    <div class="footer-tagline">Phil Reevell · Independent journalism &amp; audio</div>
+    <div class="footer-brand">Phil Reevell</div>
+    <div class="footer-tagline">Documentary journalism · Independent</div>
   </div>
   <div>
     <div class="footer-col-title">Cook in the Pacific</div>
