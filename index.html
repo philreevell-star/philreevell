@@ -810,15 +810,41 @@ footer {
 
 /* ── AMERICA FEATURE SECTION ── */
 .america-feature {
-  background: #0f0d0a;
-  padding: 80px 0;
+  background: #2d3036;
+  padding: 0 0 80px;
   position: relative;
   overflow: hidden;
-  border-top: 2px solid #9e2a1a;
+  /* Local overrides only -- these redefine the site-wide --parch-dim /
+     --parch-mute variables for descendants of .america-feature alone,
+     compensating for the lighter background without touching contrast
+     anywhere else on the site. */
+  --parch-dim: rgba(242,232,204,0.75);
+  --parch-mute: rgba(242,232,204,0.5);
+}
+.flag-rule { display:flex; height: 5px; }
+.flag-rule span { flex:1; }
+.flag-rule .r { background: #9e2a1a; }
+.flag-rule .w { background: rgba(242,232,204,0.5); }
+.flag-rule .b { background: #5080b0; }
+/* Sky imprint — a single element, masked to fade to full transparency so
+   the section's own background colour shows through underneath, with no
+   seam. Swap the file referenced in background-image if a different photo
+   is wanted later; the mask/gradient values don't need to change. */
+.flag-bg {
+  position: relative;
+  height: 640px;
+  background-image:
+    linear-gradient(160deg, rgba(26,48,84,0.35) 0%, rgba(15,13,10,0.1) 45%, rgba(158,42,26,0.28) 100%),
+    url('america-sky-header.jpg');
+  background-size: cover;
+  background-position: center 15%;
+  background-blend-mode: multiply, normal;
+  mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 40%, transparent 92%);
 }
 .america-inner {
   max-width: 1160px;
-  margin: 0 auto;
+  margin: -260px auto 0;
   padding: 0 48px;
   position: relative;
 }
@@ -873,13 +899,13 @@ footer {
   font-family: var(--serif);
   font-size: 1rem;
   font-style: italic;
-  color: rgba(242,232,204,0.45);
+  color: rgba(242,232,204,0.65);
   line-height: 1.65;
   margin-bottom: 28px;
   max-width: 480px;
 }
 .america-coming {
-  background: rgba(158,42,26,0.1);
+  background: rgba(158,42,26,0.13);
   border-left: 2px solid #9e2a1a;
   padding: 16px 20px;
   margin-bottom: 24px;
@@ -1500,6 +1526,8 @@ footer {
 
 <!-- America Feature -->
 <div class="america-feature" id="america">
+  <div class="flag-rule"><span class="r"></span><span class="w"></span><span class="b"></span></div>
+  <div class="flag-bg"></div>
   <div class="america-inner">
     <div class="america-content">
       <div class="america-eyebrow">Ongoing strand</div>
