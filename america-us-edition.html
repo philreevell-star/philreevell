@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Edition — Papers, Pollsters &amp; Podcasters — America — Phil Reevell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --parch: #f2e8cc; --parch-dim: rgba(242,232,204,0.75); --parch-mute: rgba(242,232,204,0.5);
+  --ink: #1a1208; --sans: 'DM Sans', system-ui, sans-serif; --serif: 'Source Serif 4', Georgia, serif;
+  --display: 'Libre Baskerville', Georgia, serif; --red: #9e2a1a; --red-lt: #c04030;
+  --navy: #1a3054; --navy-lt: #5080b0;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #2d3036; font-family: var(--serif); color: var(--parch); }
+
+.flag-rule { display:flex; height: 5px; }
+.flag-rule span { flex:1; }
+.flag-rule .r { background: var(--red); }
+.flag-rule .w { background: rgba(242,232,204,0.5); }
+.flag-rule .b { background: var(--navy-lt); }
+
+.top-nav { max-width: 1160px; margin: 0 auto; padding: 24px 48px 0; display:flex; justify-content:space-between; align-items:center; font-family: var(--sans); font-size: 0.75rem; }
+.top-nav a { color: var(--parch-mute); text-decoration:none; }
+.top-nav a:hover { color: var(--red-lt); }
+.top-nav .crumb b { color: var(--parch); font-weight:500; }
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 36px 24px 100px; }
+
+.masthead { padding-bottom: 24px; border-bottom: 1px solid rgba(242,232,204,0.12); }
+
+.week-photo {
+  margin: 26px 0 6px;
+  border: 1px solid rgba(242,232,204,0.12);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.week-photo img { display: block; width: 100%; height: auto; max-height: 420px; object-fit: cover; }
+.week-photo-placeholder {
+  height: 260px;
+  background: repeating-linear-gradient(45deg, rgba(242,232,204,0.04), rgba(242,232,204,0.04) 10px, rgba(242,232,204,0.015) 10px, rgba(242,232,204,0.015) 20px);
+  border: 1px dashed rgba(242,232,204,0.3);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  font-family: var(--sans); font-size: 0.75rem; color: rgba(242,232,204,0.5); line-height: 1.7;
+}
+.week-photo-caption {
+  padding: 8px 2px 0;
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  color: var(--parch-mute);
+  letter-spacing: 0.02em;
+}
+.eyebrow { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--red); font-weight: 600; display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.eyebrow::before { content:""; width:20px; height:1px; background: var(--red); display:inline-block; }
+h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 0.98; letter-spacing:-0.01em; }
+.tagline { font-family: var(--serif); font-style: italic; color: rgba(242,232,204,0.45); font-size: 1rem; margin-top: 10px; max-width: 48ch; }
+
+.section-label { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--red); font-weight: 600; display:flex; align-items:center; gap:10px; padding-bottom: 10px; border-bottom: 1px solid rgba(242,232,204,0.12); margin: 40px 0 18px; }
+.section-label::before { content:""; width:20px; height:1px; background: var(--red); display:inline-block; }
+.section-label.navy { color: var(--navy-lt); }
+.section-label.navy::before { background: var(--navy-lt); }
+
+/* automated ledger */
+.ledger { background: rgba(158,42,26,0.07); border-left: 2px solid var(--red); padding: 18px 20px; }
+.ledger-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.ledger-item dt { font-family: var(--sans); font-size: 0.62rem; color: var(--parch-mute); }
+.ledger-item dd { font-family: var(--display); font-weight:700; font-size: 1.1rem; color: var(--parch); margin-top:2px; }
+.ledger-source { grid-column: 1/-1; font-family: var(--sans); font-size: 0.6rem; color: var(--parch-mute); border-top: 1px dashed rgba(158,42,26,0.35); padding-top: 10px; margin-top: 4px; }
+
+.row { display:grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(242,232,204,0.08); }
+.headline-clip {
+  font-family: var(--display); font-style: italic; font-size: 1.02rem; color: var(--parch);
+  line-height: 1.35; margin-bottom: 6px; padding-left: 12px; border-left: 2px solid rgba(242,232,204,0.2);
+}
+.podcast-link, .paywall-note {
+  font-family: var(--sans); font-size: 0.72rem; margin-top: 4px; display: inline-block;
+}
+.podcast-link { color: var(--red-lt); text-decoration: none; border-bottom: 1px solid rgba(192,64,48,0.4); }
+.paywall-note { color: var(--parch-mute); font-style: italic; }
+.row:last-child { border-bottom:none; }
+.outlet { font-family: var(--display); font-weight:700; font-size: 0.92rem; color: var(--parch); }
+.summary { font-family: var(--serif); font-size: 0.92rem; color: var(--parch-dim); line-height:1.6; }
+.summary a { color: var(--red-lt); text-decoration:none; border-bottom:1px solid rgba(192,64,48,0.5); }
+
+.auto-tag { font-family: var(--sans); font-size: 0.56rem; letter-spacing:.12em; text-transform:uppercase; color: var(--parch-mute); float:right; border:1px solid rgba(242,232,204,0.15); padding:2px 7px; border-radius:2px; }
+
+/* manual: archive */
+.archive-item { display:grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(242,232,204,0.08); }
+.archive-item:last-child { border-bottom:none; }
+.archive-year { font-family: var(--display); font-weight:700; color: var(--navy-lt); font-size: 0.95rem; }
+.archive-title { font-family: var(--display); font-size: 1rem; color: var(--parch); margin-bottom: 4px; }
+.archive-desc { font-family: var(--serif); font-size: 0.88rem; color: var(--parch-dim); line-height:1.55; }
+.archive-desc a { color: var(--navy-lt); text-decoration:none; border-bottom:1px solid rgba(80,128,176,0.5); }
+
+/* manual: clips */
+.clip { background: rgba(26,48,84,0.12); border-left: 2px solid var(--navy-lt); padding: 14px 18px; margin-bottom: 12px; }
+.clip-show { font-family: var(--sans); font-size: 0.6rem; letter-spacing:.15em; text-transform:uppercase; color: var(--navy-lt); font-weight:600; margin-bottom:6px; }
+.clip-note { font-family: var(--serif); font-style:italic; font-size: 0.85rem; color: var(--parch-dim); margin-bottom: 8px; }
+.clip audio { width: 100%; }
+
+/* commentary / substack */
+.commentary-intro { font-family: var(--serif); font-size: 0.95rem; color: var(--parch-dim); line-height:1.65; margin-bottom: 18px; }
+.substack-embed { border: 1px solid rgba(242,232,204,0.12); border-radius: 3px; overflow:hidden; background: #fff; min-height: 320px; }
+.substack-link { display:inline-block; margin-top: 10px; font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--navy-lt); text-decoration:none; border-bottom: 1px solid rgba(80,128,176,0.5); }
+
+.wildcard { margin-top: 34px; background: rgba(158,42,26,0.08); border-left: 2px solid var(--red); padding: 20px 22px; }
+.wildcard-label { font-family: var(--sans); font-size: 0.56rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); font-weight:600; margin-bottom: 10px; }
+
+footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(242,232,204,0.1); font-family: var(--sans); font-size: 0.64rem; color: var(--parch-mute); line-height:1.7; }
+
+@media (max-width: 520px) {
+  .top-nav, .wrap { padding-left:20px; padding-right:20px; }
+  .row, .archive-item { grid-template-columns: 1fr; gap:4px; }
+  .ledger-grid { grid-template-columns: 1fr 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="flag-rule"><span class="r"></span><span class="w"></span><span class="b"></span></div>
+
+<div class="top-nav">
+  <a href="index.html">Phil Reevell</a>
+  <span class="crumb"><a href="index.html#america">America</a> <b>/ US Edition</b></span>
+</div>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="eyebrow">America · US Edition</div>
+    <h1>The Road to 2028: This Week's Edition</h1>
+    <p class="tagline">A closer look, drawing on a decade covering US elections — this week's numbers, the papers' angles, what the podcasts are chewing over, and how it connects to what I've reported before.</p>
+  </div>
+
+  <!-- ══ Photo of the week — one image, hand-picked, not automated. ══
+       Swap the placeholder div below for a real <img> once a photo is
+       chosen, e.g.:
+       <div class="week-photo"><img src="week-photo.jpg" alt="..."></div>
+       Keep the caption line naming the source underneath -- official
+       government photos (White House, State Dept, etc.) are public
+       domain; anything else needs a real license, not just a search
+       result. ══ -->
+  <div class="week-photo"><img src="week-photo.jpg" alt="President Trump and President Xi Jinping in conversation at the White House, in front of a painting depicting the July 2024 assassination attempt, during Xi's state visit, September 2026."></div>
+  <div class="week-photo-caption" id="weekPhotoCaption">Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit — Official White House Photo, September 24–25, 2026</div>
+
+  <!-- ══ AUTOMATED — sourced from data/briefing.json, same feed as the homepage card ══ -->
+  <div class="section-label">The Pollster Line <span class="auto-tag">Auto-updated</span></div>
+  <div class="ledger">
+    <dl class="ledger-grid">
+      <div class="ledger-item"><dt>Generic ballot (avg)</dt><dd id="edBallot">Dem +6.6</dd></div>
+      <div class="ledger-item"><dt>Trump approval</dt><dd id="edApproval">38 / 58</dd></div>
+      <div class="ledger-item"><dt>2028 GOP frontrunners</dt><dd id="edGop">Vance, Rubio</dd></div>
+      <div class="ledger-item"><dt>2028 Dem frontrunners</dt><dd id="edDem">Buttigieg, Newsom, AOC</dd></div>
+      <div class="ledger-item" style="grid-column: 1/-1;">
+        <dt>Ballot trend since January 2026</dt>
+        <div id="edSparkline" style="margin-top:4px;"><svg viewBox="0 0 280 56" width="240" height="48" xmlns="http://www.w3.org/2000/svg"><polyline points="6.0,42.5 50.7,13.5 95.3,28.0 140.0,24.4 184.7,22.5 229.3,18.9 274.0,18.9" fill="none" stroke="#5080b0" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="274.0" cy="18.9" r="3" fill="#5080b0"/></svg></div>
+      </div>
+      <div class="ledger-source" id="edSource">Aggregates: Silver Bulletin, Decision Desk HQ · early positioning: Emerson College Polling</div>
+    </dl>
+  </div>
+
+  <div class="section-label">The Papers <span class="auto-tag">Auto-updated</span></div>
+  <div id="edHeadlines">
+    <div class="row"><div class="outlet">The New York Times</div><div class="summary">Frames Trump's underwater approval around affordability rather than the topline ballot.</div></div>
+    <div class="row"><div class="outlet">CNN</div><div class="summary">An 8-point Democratic lead, but the real story is the enthusiasm gap between the parties.</div></div>
+    <div class="row"><div class="outlet">Washington Post</div><div class="summary">A tighter 3-point edge among registered voters, wider among those certain to vote.</div></div>
+  </div>
+
+  <div class="section-label">The Podcasters <span class="auto-tag">Auto-updated</span></div>
+  <div id="edPodcasts">
+    <div class="row"><div class="outlet">Pod Save America</div><div class="summary">DNC financial troubles, growing optimism about Ohio flipping.</div></div>
+    <div class="row"><div class="outlet">The Bulwark</div><div class="summary">A GOP pollster says Republicans may be underestimating the Senate map.</div></div>
+  </div>
+
+  <div class="wildcard">
+    <div class="wildcard-label">Today's Wildcard</div>
+    <div class="summary" id="edWildcard">Trump's own pollster, FabrizioWard, put the generic ballot seven points in Democrats' favor.</div>
+  </div>
+
+  <!-- ══ MANUAL — Phil edits these directly, edition to edition ══ -->
+  <div class="section-label navy">From the Archive</div>
+  <div class="archive-item">
+    <div class="archive-year">2024</div>
+    <div>
+      <div class="archive-title">US Local News: On the Front Page Front Line</div>
+      <div class="archive-desc">The Marion County Record story is worth revisiting now — local trust in the press was already fraying before this cycle began. <a href="america-localnews.html">Read the original piece →</a></div>
+    </div>
+  </div>
+  <div class="archive-item">
+    <div class="archive-year">2016</div>
+    <div>
+      <div class="archive-title">[Placeholder] Election night dispatch</div>
+      <div class="archive-desc">Cross-link to an earlier piece once identified from the archive — the point of this section is showing the pattern across cycles, not just this one.</div>
+    </div>
+  </div>
+
+  <div class="section-label navy">Clips</div>
+  <div class="clip">
+    <div class="clip-show">Pod Save America · this week</div>
+    <div class="clip-note">[Placeholder] Drop in a SoundCloud/embed clip or short audio excerpt here once selected.</div>
+    <audio controls src=""></audio>
+  </div>
+  <div class="clip">
+    <div class="clip-show">The Bulwark · this week</div>
+    <div class="clip-note">[Placeholder] Second clip slot.</div>
+    <audio controls src=""></audio>
+  </div>
+
+  <div class="section-label navy">Commentary</div>
+  <p class="commentary-intro">[Placeholder] Your own read on what this week's numbers and coverage actually mean — written here, or embedded from Substack below.</p>
+  <div class="substack-embed">
+    <iframe src="https://philipreevell.substack.com/embed" width="100%" height="320" style="border:none;" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <a class="substack-link" href="https://philipreevell.substack.com" target="_blank" rel="noopener">Read on Substack →</a>
+
+  <footer class="foot">
+    "The Pollster Line", "The Papers", and "The Podcasters" sections update automatically from public polling and press coverage. Summaries are paraphrased with a link to the original outlet; no article text is reproduced, and quotations are used sparingly and kept under 15 words. "From the Archive", "Clips", and "Commentary" are written and selected by hand.
+  </footer>
+
+</div>
+
+<script>
+  // Same feed as the homepage Briefing card -- keeps the two in sync
+  // without duplicating the fetch/generation logic.
+  fetch('data/briefing.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => {
+      if (d.ballot) document.getElementById('edBallot').textContent = d.ballot;
+      if (d.approval) document.getElementById('edApproval').textContent = d.approval;
+      if (d.gop_2028) document.getElementById('edGop').textContent = d.gop_2028;
+      if (d.dem_2028) document.getElementById('edDem').textContent = d.dem_2028;
+      if (d.ledger_source) document.getElementById('edSource').textContent = d.ledger_source;
+
+      if (Array.isArray(d.headlines) && d.headlines.length) {
+        const el = document.getElementById('edHeadlines');
+        el.innerHTML = d.headlines.map(h => `
+          <div class="row">
+            <div class="outlet">${h.outlet}</div>
+            <div>
+              ${h.headline ? `<div class="headline-clip">"${h.headline}"</div>` : ''}
+              <div class="summary">${h.summary}</div>
+              ${h.url ? `<a class="podcast-link" href="${h.url}" target="_blank" rel="noopener">Source →</a>` : `<span class="paywall-note">No public link available</span>`}
+            </div>
+          </div>`).join('');
+      }
+
+      if (Array.isArray(d.podcasts) && d.podcasts.length) {
+        const el = document.getElementById('edPodcasts');
+        el.innerHTML = d.podcasts.map(p => `
+          <div class="row">
+            <div class="outlet">${p.show}</div>
+            <div>
+              <div class="summary">${p.summary}</div>
+              ${p.url ? `<a class="podcast-link" href="${p.url}" target="_blank" rel="noopener">Listen →</a>` : ''}
+            </div>
+          </div>`).join('');
+      }
+
+      if (d.wildcard && d.wildcard.summary) {
+        document.getElementById('edWildcard').textContent = d.wildcard.summary;
+      }
+    })
+    .catch(() => { /* static fallback content stays as-is */ });
+
+  // Redraws the ballot trend chart from data/briefing-history.json once it
+  // has grown beyond the 7 points seeded from Silver Bulletin's public
+  // Jan-Sept 2026 numbers. Falls back to the static SVG already in the
+  // HTML otherwise.
+  fetch('data/briefing-history.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => {
+      const series = d.series;
+      if (!Array.isArray(series) || series.length <= 7) return;
+      const vals = series.map(p => p.ballot);
+      const vmin = Math.min(...vals) - 0.3, vmax = Math.max(...vals) + 0.3;
+      const w = 280, h = 56, n = vals.length;
+      const x = i => (i / (n - 1)) * (w - 12) + 6;
+      const y = v => h - 8 - ((v - vmin) / (vmax - vmin)) * (h - 16);
+      const points = vals.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+      const lastX = x(n - 1).toFixed(1), lastY = y(vals[n - 1]).toFixed(1);
+      const svg = `<svg viewBox="0 0 ${w} ${h}" width="240" height="48" xmlns="http://www.w3.org/2000/svg"><polyline points="${points}" fill="none" stroke="#5080b0" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${lastX}" cy="${lastY}" r="3" fill="#5080b0"/></svg>`;
+      const el = document.getElementById('edSparkline');
+      if (el) el.innerHTML = svg;
+    })
+    .catch(() => { /* keep the static seeded sparkline already in the HTML */ });
+</script>
+
+</body>
+</html>
