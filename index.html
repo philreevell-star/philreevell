@@ -871,7 +871,7 @@ footer {
   white-space: nowrap;
 }
 .america-content {
-  max-width: 600px;
+  max-width: 980px;
   position: relative;
   z-index: 2;
 }
@@ -941,6 +941,126 @@ footer {
   color: rgba(242,232,204,0.45);
   line-height: 1.5;
 }
+
+/* ── America opening grid: Featured Documentary + weekly Briefing side by side ── */
+.america-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+  align-items: start;
+}
+.america-cards-grid .america-coming { margin-bottom: 0; }
+.america-brief {
+  background: rgba(26,48,84,0.22);
+  border-left: 2px solid #5080b0;
+  padding: 16px 20px;
+}
+.america-brief-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.america-brief-label {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #5080b0;
+  font-weight: 600;
+}
+.america-brief-date {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  color: rgba(242,232,204,0.5);
+}
+.america-brief-title {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--parch);
+  margin-bottom: 10px;
+}
+.america-brief-photo {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  display: block;
+}
+.america-brief-photo-caption {
+  font-family: var(--sans);
+  font-size: 0.56rem;
+  color: rgba(242,232,204,0.4);
+  margin: -6px 0 10px;
+  line-height: 1.4;
+}
+.headline-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 2px;
+  float: left;
+  margin: 2px 10px 4px 0;
+}
+.america-brief-line-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-bottom: 10px;
+}
+.america-brief-line dt {
+  font-family: var(--sans);
+  font-size: 0.55rem;
+  color: rgba(242,232,204,0.5);
+}
+.america-brief-line dd {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--parch);
+  margin: 0;
+}
+.america-brief-hr {
+  border-top: 1px dashed rgba(242,232,204,0.15);
+  margin: 10px 0;
+}
+.america-brief-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+.america-brief-list li {
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  color: rgba(242,232,204,0.65);
+  padding: 4px 0;
+}
+.america-brief-list b {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.62rem;
+  color: var(--parch);
+}
+.america-brief-link {
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--parch);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(80,128,176,0.6);
+  padding-bottom: 2px;
+}
+.america-brief-link:hover { color: #5080b0; border-color: #5080b0; }
+
+@media (max-width: 720px) {
+  .america-cards-grid { grid-template-columns: 1fr; }
+}
 .america-strands {
   display: flex;
   gap: 8px;
@@ -973,6 +1093,73 @@ footer {
   transition: color 0.2s, border-color 0.2s;
 }
 .america-btn:hover { color: #c04030; border-color: #c04030; }
+
+/* ── Latest strip: small visual cards, same weight-language as the two
+     main cards above, not a footnote list. Colour-keyed by type: gilt
+     for episodes, red for features, navy for dispatches — echoing the
+     accent colours already used elsewhere in this section. ── */
+.america-latest {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(242,232,204,0.1);
+}
+.america-latest-label {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(242,232,204,0.55);
+  margin-bottom: 14px;
+}
+.america-latest-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+.latest-card {
+  background: rgba(242,232,204,0.04);
+  border-top: 3px solid #5080b0;
+  padding: 14px 16px 16px;
+  border-radius: 2px;
+  transition: transform 0.15s, background 0.15s;
+}
+.latest-card:hover { background: rgba(242,232,204,0.07); transform: translateY(-2px); }
+.latest-card.episode { border-top-color: #e0ac3a; }
+.latest-card.dispatch { border-top-color: #c04030; }
+.latest-card.feature { border-top-color: #5080b0; }
+.latest-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.latest-card-tag {
+  font-family: var(--sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.latest-card.episode .latest-card-tag { color: #e0ac3a; }
+.latest-card.dispatch .latest-card-tag { color: #c04030; }
+.latest-card.feature .latest-card-tag { color: #5080b0; }
+.latest-card-date {
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  color: rgba(242,232,204,0.45);
+}
+.latest-card-title {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  line-height: 1.3;
+  color: var(--parch);
+}
+.latest-card a.latest-card-link {
+  display: block;
+  text-decoration: none;
+}
+.latest-card a.latest-card-link:hover .latest-card-title { color: #f0e8d8; }
 
 /* ── LANDSCAPES FEATURE SECTION ── */
 .landscapes-feature {
@@ -1447,6 +1634,152 @@ footer {
   </div>
 </div>
 
+<!-- America Feature -->
+<div class="america-feature" id="america">
+  <div class="flag-rule"><span class="r"></span><span class="w"></span><span class="b"></span></div>
+  <div class="flag-bg"></div>
+  <div class="america-inner">
+    <div class="america-content">
+      <div class="america-eyebrow">Ongoing strand</div>
+      <h2 class="america-title">America</h2>
+      <div style="font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--gilt); margin-bottom: 14px;">Inquiry: America</div>
+      <p class="america-desc">Politics, economics, and culture — reported from the ground up. A decade of dispatches from a country under pressure.</p>
+      <div class="america-cards-grid">
+        <div class="america-coming">
+          <div class="america-coming-label">Featured · BBC World Service 2024</div>
+          <div class="america-coming-title">US Local News: On the Front Page Front Line</div>
+          <div class="america-coming-desc">Gary O'Donoghue visits small-town papers in Kansas, Colorado, and Iowa during a divisive Presidential election. The Marion County Record — raided by police, its editor's mother dead two days later — was still publishing.</div>
+        </div>
+        <div class="america-brief">
+          <div class="america-brief-top">
+            <span class="america-brief-label">Weekly Briefing</span>
+            <span class="america-brief-date" id="briefDate">Sept 4, 2026</span>
+          </div>
+          <div class="america-brief-title">Papers, Pollsters &amp; Podcasters</div>
+          <img class="america-brief-photo" id="briefPhoto" src="week-photo.jpg" alt="Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit, September 2026.">
+          <div class="america-brief-photo-caption" id="briefPhotoCaption">Trump &amp; Xi at the White House, Sept 24–25 — Official White House Photo</div>
+          <dl class="america-brief-line-grid">
+            <div class="america-brief-line"><dt>Generic ballot</dt><dd id="briefBallot">Dem +6.6</dd></div>
+            <div class="america-brief-line"><dt>Trump approval</dt><dd id="briefApproval">38 / 58</dd></div>
+          </dl>
+          <div id="briefSparkline" style="margin-bottom:8px;"><svg viewBox="0 0 160 40" width="130" height="32" xmlns="http://www.w3.org/2000/svg"><polyline points="4.0,31.6 29.3,8.4 54.7,20.0 80.0,17.1 105.3,15.6 130.7,12.7 156.0,12.7" fill="none" stroke="#5080b0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156.0" cy="12.7" r="2.4" fill="#5080b0"/></svg><div style="font-family: var(--sans); font-size: 0.52rem; color: rgba(242,232,204,0.4); letter-spacing:.05em;">Ballot trend since Jan 2026 · Silver Bulletin</div></div>
+          <div class="america-brief-hr"></div>
+          <ul class="america-brief-list" id="briefHeadlines">
+            <li><b>Reuters</b> Approval stuck at 33% for three straight polls; Democrats far more fired up for the midterms.</li>
+            <li><b>CNN</b> Launched a weekly midterms newsletter, 20/26 Vision.</li>
+            <li><b>Forbes</b> A UMass poll shows Trump's own 2024 voters souring on him.</li>
+          </ul>
+          <a class="america-brief-link" href="america-us-edition.html">Read this week's edition →</a>
+        </div>
+      </div>
+      <div class="america-strands">
+        <span class="america-strand politics">Politics</span>
+        <span class="america-strand economics">Economics</span>
+        <span class="america-strand social">Social</span>
+        <span class="america-strand culture">Culture</span>
+      </div>
+      <a href="america-localnews.html" class="america-btn">US Local News →</a>
+
+      <div class="america-latest" id="americaLatest" style="display:none;">
+        <div class="america-latest-label">Latest</div>
+        <div class="america-latest-grid" id="americaLatestList"></div>
+      </div>
+    </div>
+    <div class="america-ghost">America</div>
+  </div>
+</div>
+
+<script>
+  // Latest strip: pulls from data/latest.json when available (written by
+  // scripts/generate_latest.py, which merges the Substack RSS feed with
+  // hand-maintained programme milestones). Falls back to the static list
+  // already in the HTML above if the file doesn't exist yet or the fetch
+  // fails -- never an empty or broken-looking strip.
+  fetch('data/latest.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => {
+      if (!Array.isArray(d.items) || !d.items.length) return; // stays hidden
+      const tagLabel = { dispatch: 'Dispatch', episode: 'Episode', feature: 'Feature' };
+      const list = document.getElementById('americaLatestList');
+      list.innerHTML = d.items.map(item => {
+        const dt = new Date(item.date);
+        const dateStr = dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const typeClass = item.type || 'feature';
+        const tagText = tagLabel[item.type] || 'Update';
+        return `<div class="latest-card ${typeClass}">
+          <a class="latest-card-link" href="${item.url}" target="_blank" rel="noopener">
+            <div class="latest-card-top">
+              <span class="latest-card-tag">${tagText}</span>
+              <span class="latest-card-date">${dateStr}</span>
+            </div>
+            <div class="latest-card-title">${item.title}</div>
+          </a>
+        </div>`;
+      }).join('');
+      document.getElementById('americaLatest').style.display = '';
+    })
+    .catch(() => { /* no data/latest.json yet, or nothing in it — stays hidden */ });
+</script>
+
+<script>
+  // Weekly Briefing card: pulls fresh content from data/briefing.json when
+  // available (written by the automation once it's running for real). If
+  // the fetch fails or the file doesn't exist yet, the static content
+  // already in the HTML above stays exactly as it is — this week's
+  // briefing, curated by hand, not a broken or empty state.
+  fetch('data/briefing.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => {
+      if (d.ballot) document.getElementById('briefBallot').textContent = d.ballot;
+      if (d.approval) document.getElementById('briefApproval').textContent = d.approval;
+      if (d.generated_at) {
+        const dt = new Date(d.generated_at);
+        document.getElementById('briefDate').textContent = dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+      }
+      if (d.week_photo && d.week_photo.src) {
+        document.getElementById('briefPhoto').src = d.week_photo.src;
+        document.getElementById('briefPhoto').alt = d.week_photo.alt || '';
+        document.getElementById('briefPhotoCaption').textContent = d.week_photo.caption || '';
+      }
+      if (Array.isArray(d.headlines) && d.headlines.length) {
+        const list = document.getElementById('briefHeadlines');
+        list.innerHTML = '';
+        d.headlines.slice(0, 3).forEach(h => {
+          const li = document.createElement('li');
+          const b = document.createElement('b');
+          b.textContent = h.outlet;
+          li.appendChild(b);
+          li.appendChild(document.createTextNode(' ' + h.summary));
+          list.appendChild(li);
+        });
+      }
+    })
+    .catch(() => { /* keep the static weekly content already in the HTML */ });
+
+  // Redraws the ballot sparkline from data/briefing-history.json once that
+  // file has more data points than the 7 seeded here from Silver Bulletin's
+  // public numbers (Jan-Sept 2026). Falls back to the static SVG already
+  // in the HTML if the history file doesn't exist yet or has nothing new.
+  fetch('data/briefing-history.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(d => {
+      const series = d.series;
+      if (!Array.isArray(series) || series.length <= 7) return; // nothing new yet
+      const vals = series.map(p => p.ballot);
+      const vmin = Math.min(...vals) - 0.3, vmax = Math.max(...vals) + 0.3;
+      const w = 160, h = 40, n = vals.length;
+      const x = i => (i / (n - 1)) * (w - 8) + 4;
+      const y = v => h - 4 - ((v - vmin) / (vmax - vmin)) * (h - 8);
+      const points = vals.map((v, i) => `${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
+      const lastX = x(n - 1).toFixed(1), lastY = y(vals[n - 1]).toFixed(1);
+      const svg = `<svg viewBox="0 0 ${w} ${h}" width="130" height="32" xmlns="http://www.w3.org/2000/svg"><polyline points="${points}" fill="none" stroke="#5080b0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="${lastX}" cy="${lastY}" r="2.4" fill="#5080b0"/></svg>`;
+      const label = `<div style="font-family: var(--sans); font-size: 0.52rem; color: rgba(242,232,204,0.4); letter-spacing:.05em;">Ballot trend since ${series[0].date} · ${d.source || 'Silver Bulletin'}</div>`;
+      const el = document.getElementById('briefSparkline');
+      if (el) el.innerHTML = svg + label;
+    })
+    .catch(() => { /* keep the static seeded sparkline already in the HTML */ });
+</script>
+
 <!-- Identity / About band -->
 <div class="identity-band" id="about">
   <div class="identity-inner">
@@ -1492,70 +1825,6 @@ footer {
       </iframe>
     </div>
     <a href="https://philreevell-star.github.io/cookinthepacific/" class="cook-holding-btn">Cook in the Pacific →</a>
-  </div>
-</div>
-
-<!-- Commentary / Blog -->
-<div class="commentary-section" id="writing">
-  <div class="commentary-inner">
-
-    <div class="section-header fade-in" style="border-bottom-color: var(--rule-lt);">
-      <div>
-        <div class="section-label" style="color: var(--gilt);">Writing</div>
-        <div class="section-title" style="color: var(--white);">Notes &amp; commentary</div>
-      </div>
-      <a href="https://www.philreevell.com/" class="section-link" style="color: var(--parch-mute); border-color: var(--rule);">All posts →</a>
-    </div>
-
-    <div class="post-list fade-in">
-
-      <a href="landscapes-camden.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
-        <div class="post-date">May 2026</div>
-        <div>
-          <div class="post-title">The High Line that won't be</div>
-          <div class="post-excerpt">The Camden Highline has been paused indefinitely. I made a documentary about it — and about James Corner — before it was built.</div>
-        </div>
-        <div class="post-arrow">→</div>
-      </a>
-
-      <a href="america-localnews.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
-        <div class="post-date">Oct 2024</div>
-        <div>
-          <div class="post-title">US Local News 2024: on the front page front line</div>
-          <div class="post-excerpt">Gary O'Donoghue in Kansas, Colorado, and Iowa — small-town newspapers navigating a divisive Presidential election.</div>
-        </div>
-        <div class="post-arrow">→</div>
-      </a>
-
-    </div>
-
-  </div>
-</div>
-
-<!-- America Feature -->
-<div class="america-feature" id="america">
-  <div class="flag-rule"><span class="r"></span><span class="w"></span><span class="b"></span></div>
-  <div class="flag-bg"></div>
-  <div class="america-inner">
-    <div class="america-content">
-      <div class="america-eyebrow">Ongoing strand</div>
-      <h2 class="america-title">America</h2>
-      <div style="font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--gilt); margin-bottom: 14px;">Inquiry: America</div>
-      <p class="america-desc">Politics, economics, and culture — reported from the ground up. A decade of dispatches from a country under pressure.</p>
-      <div class="america-coming">
-        <div class="america-coming-label">Featured · BBC World Service 2024</div>
-        <div class="america-coming-title">US Local News: On the Front Page Front Line</div>
-        <div class="america-coming-desc">Gary O'Donoghue visits small-town papers in Kansas, Colorado, and Iowa during a divisive Presidential election. The Marion County Record — raided by police, its editor's mother dead two days later — was still publishing.</div>
-      </div>
-      <div class="america-strands">
-        <span class="america-strand politics">Politics</span>
-        <span class="america-strand economics">Economics</span>
-        <span class="america-strand social">Social</span>
-        <span class="america-strand culture">Culture</span>
-      </div>
-      <a href="america-localnews.html" class="america-btn">US Local News →</a>
-    </div>
-    <div class="america-ghost">America</div>
   </div>
 </div>
 
@@ -1606,6 +1875,43 @@ footer {
   <div class="landscapes-ghost">Landscapes</div>
 </div>
 
+
+<!-- Commentary / Blog -->
+<div class="commentary-section" id="writing">
+  <div class="commentary-inner">
+
+    <div class="section-header fade-in" style="border-bottom-color: var(--rule-lt);">
+      <div>
+        <div class="section-label" style="color: var(--gilt);">Writing</div>
+        <div class="section-title" style="color: var(--white);">Notes &amp; commentary</div>
+      </div>
+      <a href="https://www.philreevell.com/" class="section-link" style="color: var(--parch-mute); border-color: var(--rule);">All posts →</a>
+    </div>
+
+    <div class="post-list fade-in">
+
+      <a href="landscapes-camden.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
+        <div class="post-date">May 2026</div>
+        <div>
+          <div class="post-title">The High Line that won't be</div>
+          <div class="post-excerpt">The Camden Highline has been paused indefinitely. I made a documentary about it — and about James Corner — before it was built.</div>
+        </div>
+        <div class="post-arrow">→</div>
+      </a>
+
+      <a href="america-localnews.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
+        <div class="post-date">Oct 2024</div>
+        <div>
+          <div class="post-title">US Local News 2024: on the front page front line</div>
+          <div class="post-excerpt">Gary O'Donoghue in Kansas, Colorado, and Iowa — small-town newspapers navigating a divisive Presidential election.</div>
+        </div>
+        <div class="post-arrow">→</div>
+      </a>
+
+    </div>
+
+  </div>
+</div>
 
 <!-- Substack subscribe -->
 <div style="background:var(--ocean-mid);border-top:1px solid var(--rule);padding:56px 48px;text-align:center;">
