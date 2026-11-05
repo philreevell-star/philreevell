@@ -1653,21 +1653,21 @@ footer {
         <div class="america-brief">
           <div class="america-brief-top">
             <span class="america-brief-label">Weekly Briefing</span>
-            <span class="america-brief-date" id="briefDate">Sept 4, 2026</span>
+            <span class="america-brief-date" id="briefDate">Nov 5, 2026</span>
           </div>
           <div class="america-brief-title">Papers, Pollsters &amp; Podcasters</div>
           <img class="america-brief-photo" id="briefPhoto" src="week-photo.jpg" alt="Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit, September 2026.">
           <div class="america-brief-photo-caption" id="briefPhotoCaption">Trump &amp; Xi at the White House, Sept 24–25 — Official White House Photo</div>
           <dl class="america-brief-line-grid">
-            <div class="america-brief-line"><dt>Generic ballot</dt><dd id="briefBallot">Dem +6.6</dd></div>
-            <div class="america-brief-line"><dt>Trump approval</dt><dd id="briefApproval">38 / 58</dd></div>
+            <div class="america-brief-line"><dt id="briefBallotLabel">House result</dt><dd id="briefBallot">Dem · 255+ seats</dd></div>
+            <div class="america-brief-line"><dt id="briefApprovalLabel">Trump approval</dt><dd id="briefApproval">38% · exit poll</dd></div>
           </dl>
-          <div id="briefSparkline" style="margin-bottom:8px;"><svg viewBox="0 0 160 40" width="130" height="32" xmlns="http://www.w3.org/2000/svg"><polyline points="4.0,31.6 29.3,8.4 54.7,20.0 80.0,17.1 105.3,15.6 130.7,12.7 156.0,12.7" fill="none" stroke="#5080b0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156.0" cy="12.7" r="2.4" fill="#5080b0"/></svg><div style="font-family: var(--sans); font-size: 0.52rem; color: rgba(242,232,204,0.4); letter-spacing:.05em;">Ballot trend since Jan 2026 · Silver Bulletin</div></div>
+          <div id="briefSparkline" style="margin-bottom:8px;"><svg viewBox="0 0 160 40" width="130" height="32" xmlns="http://www.w3.org/2000/svg"><polyline points="4.0,31.6 29.3,8.4 54.7,20.0 80.0,17.1 105.3,15.6 130.7,12.7 156.0,12.7" fill="none" stroke="#5080b0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156.0" cy="12.7" r="2.4" fill="#5080b0"/></svg><div style="font-family: var(--sans); font-size: 0.52rem; color: rgba(242,232,204,0.4); letter-spacing:.05em;">Pre-election ballot trend, Jan–Sept 2026 · Silver Bulletin</div></div>
           <div class="america-brief-hr"></div>
           <ul class="america-brief-list" id="briefHeadlines">
-            <li><b>Reuters</b> Approval stuck at 33% for three straight polls; Democrats far more fired up for the midterms.</li>
-            <li><b>CNN</b> Launched a weekly midterms newsletter, 20/26 Vision.</li>
-            <li><b>Forbes</b> A UMass poll shows Trump's own 2024 voters souring on him.</li>
+            <li><b>CBS News</b> Democrats take the House; Jeffries projects 255+ seats, the biggest majority since 2009.</li>
+            <li><b>Click2Houston</b> Talarico beats Paxton 55–43 in Texas, a 1.2 million-vote margin.</li>
+            <li><b>Al Jazeera</b> El-Sayed beats Mike Rogers to keep Michigan's open seat Democratic.</li>
           </ul>
           <a class="america-brief-link" href="america-us-edition.html">Read this week's edition →</a>
         </div>
@@ -1730,8 +1730,12 @@ footer {
   fetch('data/briefing.json')
     .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
     .then(d => {
-      if (d.ballot) document.getElementById('briefBallot').textContent = d.ballot;
-      if (d.approval) document.getElementById('briefApproval').textContent = d.approval;
+      // Short values suit the card; the full sentences belong on the edition page.
+      const ballotVal = d.ballot_short || d.ballot, approvalVal = d.approval_short || d.approval;
+      if (ballotVal) document.getElementById('briefBallot').textContent = ballotVal;
+      if (approvalVal) document.getElementById('briefApproval').textContent = approvalVal;
+      if (d.ballot_label) document.getElementById('briefBallotLabel').textContent = d.ballot_label;
+      if (d.approval_label) document.getElementById('briefApprovalLabel').textContent = d.approval_label.replace(/\s*\(.*\)$/, '');
       if (d.generated_at) {
         const dt = new Date(d.generated_at);
         document.getElementById('briefDate').textContent = dt.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
@@ -1749,7 +1753,7 @@ footer {
           const b = document.createElement('b');
           b.textContent = h.outlet;
           li.appendChild(b);
-          li.appendChild(document.createTextNode(' ' + h.summary));
+          li.appendChild(document.createTextNode(' ' + (h.short || h.summary)));
           list.appendChild(li);
         });
       }

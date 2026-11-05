@@ -68,6 +68,7 @@ h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-siz
 .ledger-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
 .ledger-item dt { font-family: var(--sans); font-size: 0.62rem; color: var(--parch-mute); }
 .ledger-item dd { font-family: var(--display); font-weight:700; font-size: 1.1rem; color: var(--parch); margin-top:2px; }
+.ledger-item dd.long { font-family: var(--serif, Georgia, serif); font-weight:400; font-size: 0.95rem; line-height:1.45; }
 .ledger-source { grid-column: 1/-1; font-family: var(--sans); font-size: 0.6rem; color: var(--parch-mute); border-top: 1px dashed rgba(158,42,26,0.35); padding-top: 10px; margin-top: 4px; }
 
 .row { display:grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(242,232,204,0.08); }
@@ -150,34 +151,37 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
   <div class="section-label">The Pollster Line <span class="auto-tag">Auto-updated</span></div>
   <div class="ledger">
     <dl class="ledger-grid">
-      <div class="ledger-item"><dt>Generic ballot (avg)</dt><dd id="edBallot">Dem +6.6</dd></div>
-      <div class="ledger-item"><dt>Trump approval</dt><dd id="edApproval">38 / 58</dd></div>
+      <div class="ledger-item"><dt id="edBallotLabel">House result</dt><dd class="long" id="edBallot">Democrats win the House. Minority Leader Jeffries says they will hold at least 255 seats; CBS News has them on pace for 256, the biggest majority since Democrats held 257 in 2009 (CBS News, Nov. 4–5, 2026)</dd></div>
+      <div class="ledger-item"><dt id="edSenateLabel">Senate</dt><dd class="long" id="edSenate">Democrats take control with at least 54 seats, including upsets in Texas, Kansas and South Carolina. Alaska and Mississippi still too close to call (CBS News, Nov. 5, 2026)</dd></div>
+      <div class="ledger-item"><dt id="edApprovalLabel">Trump approval (exit poll)</dt><dd class="long" id="edApproval">38% approve in the NBC News Exit Poll, down from 45% at his first midterm in 2018 and the lowest for a sitting president on Election Day in nearly two decades (NBC News, Nov. 3–4, 2026)</dd></div>
       <div class="ledger-item"><dt>2028 GOP frontrunners</dt><dd id="edGop">Vance, Rubio</dd></div>
       <div class="ledger-item"><dt>2028 Dem frontrunners</dt><dd id="edDem">Buttigieg, Newsom, AOC</dd></div>
       <div class="ledger-item" style="grid-column: 1/-1;">
-        <dt>Ballot trend since January 2026</dt>
+        <dt>Pre-election generic ballot trend, Jan–Sept 2026</dt>
         <div id="edSparkline" style="margin-top:4px;"><svg viewBox="0 0 280 56" width="240" height="48" xmlns="http://www.w3.org/2000/svg"><polyline points="6.0,42.5 50.7,13.5 95.3,28.0 140.0,24.4 184.7,22.5 229.3,18.9 274.0,18.9" fill="none" stroke="#5080b0" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="274.0" cy="18.9" r="3" fill="#5080b0"/></svg></div>
       </div>
-      <div class="ledger-source" id="edSource">Aggregates: Silver Bulletin, Decision Desk HQ · early positioning: Emerson College Polling</div>
+      <div class="ledger-source" id="edSource">CBS News, NBC News Exit Poll, Al Jazeera, Click2Houston, Boston 25 News/AP and Magnolia Tribune election-night and day-after reporting, Nov. 3–5, 2026 · ballot trend: Silver Bulletin</div>
     </dl>
   </div>
 
   <div class="section-label">The Papers <span class="auto-tag">Auto-updated</span></div>
   <div id="edHeadlines">
-    <div class="row"><div class="outlet">The New York Times</div><div class="summary">Frames Trump's underwater approval around affordability rather than the topline ballot.</div></div>
-    <div class="row"><div class="outlet">CNN</div><div class="summary">An 8-point Democratic lead, but the real story is the enthusiasm gap between the parties.</div></div>
-    <div class="row"><div class="outlet">Washington Post</div><div class="summary">A tighter 3-point edge among registered voters, wider among those certain to vote.</div></div>
+    <div class="row"><div class="outlet">CBS News</div><div class="summary">Democrats take the House; Jeffries projects 255+ seats, the biggest majority since 2009.</div></div>
+    <div class="row"><div class="outlet">Click2Houston</div><div class="summary">Talarico beats Paxton 55–43 in Texas, a 1.2 million-vote margin.</div></div>
+    <div class="row"><div class="outlet">Al Jazeera</div><div class="summary">El-Sayed beats Mike Rogers to keep Michigan's open seat Democratic.</div></div>
+    <div class="row"><div class="outlet">Boston 25 News / AP</div><div class="summary">Alaska: Peltola and Sullivan within a point; ranked-choice count Nov. 18.</div></div>
+    <div class="row"><div class="outlet">Magnolia Tribune</div><div class="summary">Mississippi: Colom leads Hyde-Smith by about 1,100 votes.</div></div>
   </div>
 
   <div class="section-label">The Podcasters <span class="auto-tag">Auto-updated</span></div>
   <div id="edPodcasts">
-    <div class="row"><div class="outlet">Pod Save America</div><div class="summary">DNC financial troubles, growing optimism about Ohio flipping.</div></div>
-    <div class="row"><div class="outlet">The Bulwark</div><div class="summary">A GOP pollster says Republicans may be underestimating the Senate map.</div></div>
+    <div class="row"><div class="outlet">NPR Politics Podcast</div><div class="summary">The morning after: the scale of the House and Senate flips.</div></div>
+    <div class="row"><div class="outlet">The Downballot</div><div class="summary">A race-by-race rundown of the night's biggest upsets.</div></div>
   </div>
 
   <div class="wildcard">
-    <div class="wildcard-label">Today's Wildcard</div>
-    <div class="summary" id="edWildcard">Trump's own pollster, FabrizioWard, put the generic ballot seven points in Democrats' favor.</div>
+    <div class="wildcard-label">This Week's Wildcard</div>
+    <div class="summary" id="edWildcard">Democrats will hold a majority of governorships for the first time since 2010, after flipping five Republican-held states, all won by Trump in 2024: Texas, Georgia, Ohio, Iowa and Nevada.</div>
   </div>
 
   <!-- ══ MANUAL — Phil edits these directly, edition to edition ══ -->
@@ -186,7 +190,7 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
     <div class="archive-year">2024</div>
     <div>
       <div class="archive-title">US Local News: On the Front Page Front Line</div>
-      <div class="archive-desc">The Marion County Record was raided by police in August 2023; its 98-year-old co-owner died of a heart attack the day after officers searched her home and seized the newsroom's computers. The paper kept publishing. That story sits underneath everything in this week's edition above: the local papers now straining to cover a midterm cycle are often the ones with the thinnest resources to do it, even as national outlets pour money into midterms-specific coverage like CNN's new 20/26 Vision newsletter. Worth asking, each week: which stories aren't getting the Marion County treatment — the ones nobody's watching closely enough to notice when they go wrong. <a href="america-localnews.html">Read the original piece →</a></div>
+      <div class="archive-desc">The Marion County Record was raided by police in August 2023; its 98-year-old co-owner died of a heart attack the day after officers searched her home and seized the newsroom's computers. The paper kept publishing. That story sits underneath this week's results: the races that went down to the wire, in Alaska and Mississippi, are being counted in places whose local papers have the thinnest resources to follow every ballot, while national outlets have already moved on to 2028. Worth asking, each week: which stories aren't getting the Marion County treatment — the ones nobody's watching closely enough to notice when they go wrong. <a href="america-localnews.html">Read the original piece →</a></div>
     </div>
   </div>
 
@@ -223,6 +227,10 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
     .then(d => {
       if (d.ballot) document.getElementById('edBallot').textContent = d.ballot;
       if (d.approval) document.getElementById('edApproval').textContent = d.approval;
+      if (d.ballot_label) document.getElementById('edBallotLabel').textContent = d.ballot_label;
+      if (d.approval_label) document.getElementById('edApprovalLabel').textContent = d.approval_label;
+      if (d.senate) document.getElementById('edSenate').textContent = d.senate;
+      if (d.senate_label) document.getElementById('edSenateLabel').textContent = d.senate_label;
       if (d.gop_2028) document.getElementById('edGop').textContent = d.gop_2028;
       if (d.dem_2028) document.getElementById('edDem').textContent = d.dem_2028;
       if (d.ledger_source) document.getElementById('edSource').textContent = d.ledger_source;
@@ -252,9 +260,9 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
           </div>`).join('');
       }
 
-      if (d.wildcard && d.wildcard.summary) {
-        document.getElementById('edWildcard').textContent = d.wildcard.summary;
-      }
+      // Accepts either a plain string or { summary: "..." }.
+      const wild = typeof d.wildcard === 'string' ? d.wildcard : (d.wildcard && d.wildcard.summary);
+      if (wild) document.getElementById('edWildcard').textContent = wild;
     })
     .catch(() => { /* static fallback content stays as-is */ });
 
