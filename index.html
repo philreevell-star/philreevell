@@ -1656,8 +1656,8 @@ footer {
             <span class="america-brief-date" id="briefDate">Nov 5, 2026</span>
           </div>
           <div class="america-brief-title">Papers, Pollsters &amp; Podcasters</div>
-          <img class="america-brief-photo" id="briefPhoto" src="week-photo.jpg" alt="Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit, September 2026.">
-          <div class="america-brief-photo-caption" id="briefPhotoCaption">Trump &amp; Xi at the White House, Sept 24–25 — Official White House Photo</div>
+          <img class="america-brief-photo" id="briefPhoto" src="week-photo.jpg" style="object-position:50% 74%" alt="President Trump speaks at a podium in front of the renovated Lincoln Memorial Reflecting Pool, with the Washington Monument behind him, on November 2, 2026, the day before the midterm elections.">
+          <div class="america-brief-photo-caption" id="briefPhotoCaption"><a href="https://www.flickr.com/photos/whitehouse/55630953880" target="_blank" rel="noopener" style="color:inherit">Trump at the Reflecting Pool, Nov 2, the day before the midterms — Official White House Photo</a></div>
           <dl class="america-brief-line-grid">
             <div class="america-brief-line"><dt id="briefBallotLabel">House result</dt><dd id="briefBallot">Dem · 255+ seats</dd></div>
             <div class="america-brief-line"><dt id="briefApprovalLabel">Trump approval</dt><dd id="briefApproval">38% · exit poll</dd></div>
@@ -1743,7 +1743,9 @@ footer {
       if (d.week_photo && d.week_photo.src) {
         document.getElementById('briefPhoto').src = d.week_photo.src;
         document.getElementById('briefPhoto').alt = d.week_photo.alt || '';
-        document.getElementById('briefPhotoCaption').textContent = d.week_photo.caption || '';
+        if (d.week_photo.position) document.getElementById('briefPhoto').style.objectPosition = d.week_photo.position;
+        const cap = document.getElementById('briefPhotoCaption');
+        if (d.week_photo.caption) { cap.textContent = ''; const a = document.createElement(d.week_photo.link ? 'a' : 'span'); if (d.week_photo.link) { a.href = d.week_photo.link; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'inherit'; } a.textContent = d.week_photo.caption; cap.appendChild(a); }
       }
       if (Array.isArray(d.headlines) && d.headlines.length) {
         const list = document.getElementById('briefHeadlines');

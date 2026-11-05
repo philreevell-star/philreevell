@@ -144,8 +144,8 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
        government photos (White House, State Dept, etc.) are public
        domain; anything else needs a real license, not just a search
        result. ══ -->
-  <div class="week-photo"><img id="weekPhoto" src="week-photo.jpg" alt="President Trump and President Xi Jinping in conversation at the White House, in front of a painting depicting the July 2024 assassination attempt, during Xi's state visit, September 2026."></div>
-  <div class="week-photo-caption" id="weekPhotoCaption">Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit — Official White House Photo, September 24–25, 2026</div>
+  <div class="week-photo"><img id="weekPhoto" src="week-photo.jpg" style="object-position:50% 74%" alt="President Trump speaks at a podium in front of the renovated Lincoln Memorial Reflecting Pool, with the Washington Monument behind him, on November 2, 2026, the day before the midterm elections."></div>
+  <div class="week-photo-caption" id="weekPhotoCaption"><a href="https://www.flickr.com/photos/whitehouse/55630953880" target="_blank" rel="noopener" style="color:inherit">President Trump speaks about the Reflecting Pool renovation on the eve of the midterms, November 2, 2026 — Official White House Photo (P20261102JB-0208), United States Government Work</a></div>
 
   <!-- ══ AUTOMATED — sourced from data/briefing.json, same feed as the homepage card ══ -->
   <div class="section-label">The Pollster Line <span class="auto-tag">Auto-updated</span></div>
@@ -237,7 +237,9 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       if (d.week_photo && d.week_photo.src) {
         const ph = document.getElementById('weekPhoto');
         ph.src = d.week_photo.src; ph.alt = d.week_photo.alt || '';
-        document.getElementById('weekPhotoCaption').textContent = d.week_photo.long_caption || d.week_photo.caption || '';
+        if (d.week_photo.position) ph.style.objectPosition = d.week_photo.position;
+        const cap = document.getElementById('weekPhotoCaption'); const txt = d.week_photo.long_caption || d.week_photo.caption || '';
+        cap.textContent = ''; const a = document.createElement(d.week_photo.link ? 'a' : 'span'); if (d.week_photo.link) { a.href = d.week_photo.link; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'inherit'; } a.textContent = txt; cap.appendChild(a);
       }
 
       if (Array.isArray(d.headlines) && d.headlines.length) {
