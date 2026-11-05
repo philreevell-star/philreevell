@@ -144,7 +144,7 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
        government photos (White House, State Dept, etc.) are public
        domain; anything else needs a real license, not just a search
        result. ══ -->
-  <div class="week-photo"><img src="week-photo.jpg" alt="President Trump and President Xi Jinping in conversation at the White House, in front of a painting depicting the July 2024 assassination attempt, during Xi's state visit, September 2026."></div>
+  <div class="week-photo"><img id="weekPhoto" src="week-photo.jpg" alt="President Trump and President Xi Jinping in conversation at the White House, in front of a painting depicting the July 2024 assassination attempt, during Xi's state visit, September 2026."></div>
   <div class="week-photo-caption" id="weekPhotoCaption">Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit — Official White House Photo, September 24–25, 2026</div>
 
   <!-- ══ AUTOMATED — sourced from data/briefing.json, same feed as the homepage card ══ -->
@@ -234,6 +234,11 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       if (d.gop_2028) document.getElementById('edGop').textContent = d.gop_2028;
       if (d.dem_2028) document.getElementById('edDem').textContent = d.dem_2028;
       if (d.ledger_source) document.getElementById('edSource').textContent = d.ledger_source;
+      if (d.week_photo && d.week_photo.src) {
+        const ph = document.getElementById('weekPhoto');
+        ph.src = d.week_photo.src; ph.alt = d.week_photo.alt || '';
+        document.getElementById('weekPhotoCaption').textContent = d.week_photo.long_caption || d.week_photo.caption || '';
+      }
 
       if (Array.isArray(d.headlines) && d.headlines.length) {
         const el = document.getElementById('edHeadlines');
