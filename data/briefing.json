@@ -1,60 +1,22 @@
 {
-  "generated_at": "2026-11-03T08:00:00Z",
-  "phase": "election-day",
-  "ballot": "Dem +8.9 (Silver Bulletin, Nov 2, 2026)",
-  "approval": "37 / 61 (cross-aggregator average, Nov 2, 2026)",
+  "generated_at": "2026-11-05T14:00:00Z",
+  "phase": "post-election",
+  "ballot": "Democrats win the House — Minority Leader Jeffries projects 255+ seats, the largest Democratic majority since 2009 (CBS News, NBC News, Nov. 3–4, 2026)",
+  "approval": "38% in Election Day exit polls — among the lowest on record for a midterm president (NBC News exit polls, Nov. 3, 2026)",
   "gop_2028": "Vance, Rubio",
   "dem_2028": "Buttigieg, Newsom, AOC",
-  "ledger_source": "Aggregates: Silver Bulletin, Decision Desk HQ · early positioning: Emerson College Polling",
+  "ledger_source": "CBS News, NBC News, The Hill, Newsweek and Mississippi Free Press election-night and day-after reporting, Nov. 3–5, 2026",
   "headlines": [
-    {
-      "outlet": "NBC News / Washington Post",
-      "headline": "Michigan Democrat crosses party lines",
-      "summary": "Rep. Haley Stevens, who lost the Michigan Senate primary to Abdul El-Sayed, publicly endorsed Republican Mike Rogers on Nov. 1 — the most unusual case of intra-party defection in a top-tier Senate race this cycle, following days of public friction over an ad Stevens called antisemitic.",
-      "url": "https://www.nbcnews.com/politics/2026-election/haley-stevens-endorses-gop-mike-rogers-michigan-senate-race-el-sayed-rcna606831"
-    },
-    {
-      "outlet": "CBS News",
-      "headline": "Five Senate toss-ups, Cruz's warning",
-      "summary": "CBS's data desk rates Maine, Michigan, Ohio, Texas and Alaska as Senate toss-ups and newly moved South Carolina to lean-R after a tied NYT/Siena poll. Sen. Ted Cruz publicly warned Republicans could lose Texas and both chambers if conservative turnout lags.",
-      "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/"
-    },
-    {
-      "outlet": "Al Jazeera",
-      "headline": "Trump, Obama trade closing arguments",
-      "summary": "Dueling rallies in Georgia and Ohio in the campaign's final days: Obama framed the Iran war's cost to consumers campaigning for Sen. Jon Ossoff, while Trump defended his foreign-policy record campaigning for Ohio's Vivek Ramaswamy.",
-      "url": "https://www.aljazeera.com/news/2026/10/29/obama-and-trump-rally-in-georgia-and-ohio-key-takeaways"
-    },
-    {
-      "outlet": "CBS News",
-      "headline": "Alaska \"two Sullivans\" suit dismissed",
-      "summary": "A federal judge dismissed the DOJ's lawsuit seeking to block certification of Alaska's Senate race over a second, same-named candidate on the ballot, ruling the government lacked standing. A separate DOJ criminal probe continues.",
-      "url": "https://www.cbsnews.com/news/judge-doj-lawsuit-alaska-senate-race-dan-sullivan/"
-    },
-    {
-      "outlet": "University of Florida Election Lab (via CBS)",
-      "headline": "Early voting tops 49.6 million",
-      "summary": "Roughly 49.6 million early votes had been cast nationally as of the final weekend before Election Day — a marker of unusually high engagement heading into Nov. 3.",
-      "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/"
-    }
+    {"outlet": "CBS News", "headline": "Democrats seize the House — and the knives come out in both parties", "summary": "CBS projects Democrats have won House control; Minority Leader Hakeem Jeffries says the party will hold at least 255 seats, its largest majority since 2009, with leadership elections set for Nov. 18-19. Speaker Mike Johnson won't seek the minority leader post, touching off a fight between Jim Jordan and Steve Scalise, while incoming Oversight Chair Robert Garcia has outlined investigations into Trump family business dealings, DHS/ICE and the Epstein files. Notable GOP losses include Reps. David Valadao (CA-22), Tom Barrett (MI-7), Brian Fitzpatrick (PA-1) and Kevin Kiley (CA-6).", "url": "https://www.cbsnews.com/live-updates/house-election-results-2026/"},
+    {"outlet": "NPR", "headline": "El-Sayed flips Michigan's Senate seat", "summary": "Democrat Abdul El-Sayed defeated Republican Mike Rogers to win Michigan's open Senate seat, one of the marquee Democratic pickups of the night and a boost for the party's progressive wing.", "url": "https://www.npr.org/2026/11/04/g-s1-150029/michigan-senate-race-abdul-el-sayed-mike-rogers"},
+    {"outlet": "Click2Houston / Decision 2026", "headline": "Talarico routs Paxton in Texas", "summary": "Democrat James Talarico defeated Republican Ken Paxton for Texas's Senate seat by a wide 55%-43% margin (about 1.2 million votes) with all precincts reporting — a result Fox News described conservative reaction to as a \"catastrophic\" and \"blue tsunami\" night, with Sen. Ted Cruz calling it a \"Watergate-level repudiation.\"", "url": "https://www.click2houston.com/decision-2026/2026/11/02/texas-us-senate-election-results-ken-paxton-vs-james-talarico/"},
+    {"outlet": "Newsweek", "headline": "Alaska Senate race still too close to call — but the majority's already decided", "summary": "Democrats have already secured Senate control regardless of the outcome, but Alaska remains a nail-biter: Democrat Mary Peltola led Republican incumbent Dan Sullivan 48.2% to 47.9% as of midweek, with a ranked-choice tabulation that may not be finished before certification, targeted for Nov. 25. A Peltola win would be Democrats' first Alaska Senate pickup since 2014.", "url": "https://www.newsweek.com/democrats-congress-alaska-senate-race-12660748"},
+    {"outlet": "Mississippi Free Press", "headline": "Mississippi Senate race down to about 1,100 votes", "summary": "Democrat Scott Colom leads Republican incumbent Cindy Hyde-Smith by roughly 1,100-1,800 votes depending on the tracker, in a race nobody expected to be close. Thousands of affidavit and absentee ballots remain outstanding; Harrison County won't finish counting its affidavits until Nov. 10.", "url": "https://www.mississippifreepress.org/liveblog-mississippis-2026-u-s-senate-election-results/"}
   ],
   "podcasts": [
-    {
-      "show": "Bulwark Takes (The Bulwark)",
-      "summary": "\"Three Days Until the Midterms. How Bad Could It Get for Republicans?\" (Nov 1) — Bill Kristol and Sarah Longwell on disillusioned Trump voters in her focus groups, Democratic openings in red states, and live reaction to the Stevens/Rogers endorsement.",
-      "url": "https://www.thebulwark.com/p/three-days-until-the-midterms-how"
-    },
-    {
-      "show": "NPR",
-      "summary": "\"Can I trust the polls? And other questions from listeners about the 2026 midterms\" (Oct 31) — NPR's politics team answers listener questions on polling reliability heading into Election Day.",
-      "url": "https://www.npr.org/2026/10/31/g-s1-149981/listener-questions-npr-midterms-2026-election"
-    },
-    {
-      "show": "Pod Save America (Crooked Media)",
-      "summary": "\"Have Republicans Already Blown the Midterms?\" (Oct 18) — Dan Pfeiffer interviews Cook Political Report's Amy Walter on whether redistricting backfired on the GOP and whether the numbers show a Democratic wave.",
-      "url": "https://crooked.com/podcast/have-republicans-already-blown-the-midterms/"
-    }
+    {"show": "NPR Politics Podcast", "summary": "\"Dems win big in midterm elections\" (Nov 4) — NPR's team breaks down the scale of the House and Senate flips the morning after.", "url": "https://www.npr.org/2026/11/04/nx-s1-6028566/dems-win-big-in-midterm-elections"},
+    {"show": "The Downballot (Daily Kos Elections)", "summary": "\"Holy crap, what an election!\" (Nov 4) — a race-by-race rundown of the night's biggest upsets, including Texas, Michigan and the still-uncalled Alaska and Mississippi Senate contests.", "url": "https://pocketcasts.com/podcast/the-downballot/954073f0-6ca2-013a-d774-0acc26574db2/holy-crap-what-an-election/7c55b795-e185-4b0f-8066-504d840b0a8b"},
+    {"show": "NPR", "summary": "\"The world is reacting to the Democrats' sweeping midterm elections victory\" (Nov 4) — international reaction and what the result signals for Trump's remaining two years.", "url": "https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections"}
   ],
-  "wildcard": "A federal judge dismissed a Trump DOJ lawsuit that sought to block certification of Alaska's Senate race over a second candidate who happens to share Sen. Dan Sullivan's exact name — one of the stranger ballot disputes of the cycle, with a separate criminal probe still open.",
-  "note_from_this_run": "Generated the day before/of Election Day (Nov 3, 2026) by a weekly scheduled Claude task. Checked: NPR, CBS, Al Jazeera, NBC, The Bulwark, Pod Save America. Not checked this week: The Daily, Meet the Press, Inside Elections, The Economist. No new week_photo supplied — the existing Sept 24–25 Trump/Xi photo was left in place pending a fresh image."
+  "wildcard": "Democrats have won a majority of U.S. governorships for the first time in 16 years, flipping five Trump-won states (Georgia, Ohio, Texas, Iowa and Nevada) in a single night."
 }
