@@ -51,6 +51,11 @@
   ],
   "podcasts": [
     {
+      "show": "The Daily (New York Times)",
+      "summary": "\"A Landslide Victory for Democrats\" (Nov 4) — Nate Cohn, Lisa Lerer and Shane Goldmacher on a bigger-than-expected wave that handed Democrats both chambers, and what it means for Trump's last two years.",
+      "url": "https://podcasts.apple.com/us/podcast/a-landslide-victory-for-democrats/id1200361736?i=1000799791974"
+    },
+    {
       "show": "NPR Politics Podcast",
       "summary": "\"Dems win big in midterm elections\" (Nov 4) — NPR's team breaks down the scale of the House and Senate flips the morning after.",
       "url": "https://www.npr.org/2026/11/04/nx-s1-6028566/dems-win-big-in-midterm-elections"
@@ -59,11 +64,6 @@
       "show": "The Downballot (Daily Kos Elections)",
       "summary": "\"Holy crap, what an election!\" (Nov 4) — a race-by-race rundown of the night's biggest upsets, including Texas, Michigan and the still-uncalled Alaska and Mississippi Senate contests.",
       "url": "https://pocketcasts.com/podcast/the-downballot/954073f0-6ca2-013a-d774-0acc26574db2/holy-crap-what-an-election/7c55b795-e185-4b0f-8066-504d840b0a8b"
-    },
-    {
-      "show": "NPR",
-      "summary": "\"The world is reacting to the Democrats' sweeping midterm elections victory\" (Nov 4) — international reaction and what the result signals for Trump's remaining two years.",
-      "url": "https://www.npr.org/2026/11/04/nx-s1-6028664/world-reacts-midterm-elections"
     }
   ],
   "wildcard": "Democrats will hold a majority of governorships for the first time since 2010, after flipping five Republican-held states, all won by Trump in 2024: Texas, Georgia, Ohio, Iowa and Nevada.",
