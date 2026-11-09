@@ -1,0 +1,22 @@
+{
+  "editions": [
+    {
+      "date": "2026-11-05",
+      "phase": "post-election",
+      "title": "After the midterms: Democrats take the House and Senate",
+      "file": "data/editions/2026-11-05.json"
+    },
+    {
+      "date": "2026-11-03",
+      "phase": "election-day",
+      "title": "Election day: Senate toss-ups and record early voting",
+      "file": "data/editions/2026-11-03.json"
+    },
+    {
+      "date": "2026-09-04",
+      "phase": "midterm-watch",
+      "title": "Midterm watch: Democrats lead the generic ballot by 6.6 points",
+      "file": "data/editions/2026-09-04.json"
+    }
+  ]
+}

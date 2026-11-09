@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-11-05T14:00:00Z",
+  "phase": "post-election",
+  "ballot_label": "House result",
+  "ballot": "Democrats win the House. Minority Leader Jeffries says they will hold at least 255 seats; CBS News has them on pace for 256, the biggest majority since Democrats held 257 in 2009 (CBS News, Nov. 4–5, 2026)",
+  "ballot_short": "Dem · 255+ seats",
+  "senate_label": "Senate",
+  "senate": "Democrats take control with at least 54 seats, including upsets in Texas, Kansas and South Carolina. Alaska and Mississippi still too close to call (CBS News, Nov. 5, 2026)",
+  "approval_label": "Trump approval (exit poll)",
+  "approval": "38% approve in the NBC News Exit Poll, down from 45% at his first midterm in 2018 and the lowest for a sitting president on Election Day in nearly two decades (NBC News, Nov. 3–4, 2026)",
+  "approval_short": "38% · exit poll",
+  "gop_2028": "Vance, Rubio",
+  "dem_2028": "Buttigieg, Newsom, AOC",
+  "ledger_source": "CBS News, NBC News Exit Poll, Al Jazeera, Click2Houston, Boston 25 News/AP and Magnolia Tribune election-night and day-after reporting, Nov. 3–5, 2026",
+  "headlines": [
+    {
+      "outlet": "CBS News",
+      "headline": "Democrats take the House — and both parties start a leadership fight",
+      "short": "Democrats take the House; Jeffries projects 255+ seats, the biggest majority since 2009.",
+      "summary": "CBS projects Democrats have won House control. Minority Leader Hakeem Jeffries says the party will hold at least 255 seats; the largest majority of recent decades was the 257 Democrats held in 2009. House Democrats hold leadership elections on Nov. 18–19. Speaker Mike Johnson won't seek the minority leader post, opening a contest between Jim Jordan and Steve Scalise, and incoming Oversight Chair Robert Garcia has set out investigations into Trump family business dealings, DHS and ICE, and the Epstein files. Republican incumbents projected to lose include David Valadao (CA-22), Tom Barrett (MI-7), Brian Fitzpatrick (PA-1) and Kevin Kiley (CA-6).",
+      "url": "https://www.cbsnews.com/live-updates/house-election-results-2026/"
+    },
+    {
+      "outlet": "Click2Houston",
+      "headline": "Talarico beats Paxton in Texas",
+      "short": "Talarico beats Paxton 55–43 in Texas, a 1.2 million-vote margin.",
+      "summary": "Democrat James Talarico defeated Republican Ken Paxton for Texas's Senate seat, 55% to 43%, a margin of about 1.2 million votes with every precinct reporting. It is the first Democratic statewide win in Texas in more than three decades.",
+      "url": "https://www.click2houston.com/decision-2026/2026/11/04/nbc-news-projects-james-talarico-as-winner-of-texas-us-senate-race-defeating-ken-paxton/"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "headline": "El-Sayed holds Michigan's open Senate seat",
+      "short": "El-Sayed beats Mike Rogers to keep Michigan's open seat Democratic.",
+      "summary": "Democrat Abdul El-Sayed defeated Republican Mike Rogers for the Senate seat left open by Democrat Gary Peters's retirement, a key hold for the party and a lift for its progressive wing.",
+      "url": "https://www.aljazeera.com/news/2026/11/4/el-sayed-defeats-rogers-to-win-senate-seat-in-michigan"
+    },
+    {
+      "outlet": "Boston 25 News / AP",
+      "headline": "Alaska Senate race still too close to call",
+      "short": "Alaska: Peltola and Sullivan within a point; ranked-choice count Nov. 18.",
+      "summary": "Democrat Mary Peltola and Republican incumbent Dan Sullivan are separated by less than a point, with the lead changing hands as ballots come in; Peltola was about 600 votes ahead in AP's Wednesday-morning count. Neither has a first-choice majority, so the ranked-choice tabulation, scheduled for Nov. 18, may decide it.",
+      "url": "https://www.boston25news.com/news/trending/election-day-2026-alaska-us-senate-race-too-close-call/SX432OUIXRED5CONXA55EGTKBA/"
+    },
+    {
+      "outlet": "Magnolia Tribune",
+      "headline": "Mississippi Senate race comes down to about 1,100 votes",
+      "short": "Mississippi: Colom leads Hyde-Smith by about 1,100 votes.",
+      "summary": "Democrat Scott Colom leads Republican incumbent Cindy Hyde-Smith by 1,138 votes in a race few expected to be close. Nearly 3,600 mail-in absentee ballots are still outstanding, along with possibly thousands of affidavit ballots awaiting cure.",
+      "url": "https://magnoliatribune.com/2026/11/05/colom-extends-lead-over-hyde-smith-with-thousands-of-affidavit-and-mail-in-absentee-ballots-to-be-counted/"
+    }
+  ],
+  "podcasts": [
+    {
+      "show": "The Daily (New York Times)",
+      "summary": "\"A Landslide Victory for Democrats\" (Nov 4) — Nate Cohn, Lisa Lerer and Shane Goldmacher on a bigger-than-expected wave that handed Democrats both chambers, and what it means for Trump's last two years.",
+      "url": "https://podcasts.apple.com/us/podcast/a-landslide-victory-for-democrats/id1200361736?i=1000799791974"
+    },
+    {
+      "show": "NPR Politics Podcast",
+      "summary": "\"Dems win big in midterm elections\" (Nov 4) — NPR's team breaks down the scale of the House and Senate flips the morning after.",
+      "url": "https://www.npr.org/2026/11/04/nx-s1-6028566/dems-win-big-in-midterm-elections"
+    },
+    {
+      "show": "The Downballot (Daily Kos Elections)",
+      "summary": "\"Holy crap, what an election!\" (Nov 4) — a race-by-race rundown of the night's biggest upsets, including Texas, Michigan and the still-uncalled Alaska and Mississippi Senate contests.",
+      "url": "https://pocketcasts.com/podcast/the-downballot/954073f0-6ca2-013a-d774-0acc26574db2/holy-crap-what-an-election/7c55b795-e185-4b0f-8066-504d840b0a8b"
+    }
+  ],
+  "wildcard": "Democrats will hold a majority of governorships for the first time since 2010, after flipping five Republican-held states, all won by Trump in 2024: Texas, Georgia, Ohio, Iowa and Nevada.",
+  "week_photo": {
+    "src": "photos/2026-11-02-reflecting-pool.jpg",
+    "alt": "President Trump speaks at a podium in front of the renovated Lincoln Memorial Reflecting Pool, with the Washington Monument behind him, on November 2, 2026, the day before the midterm elections.",
+    "caption": "Trump at the Reflecting Pool, Nov 2, the day before the midterms — Official White House Photo",
+    "long_caption": "President Trump speaks about the Reflecting Pool renovation on the eve of the midterms, November 2, 2026 — Official White House Photo (P20261102JB-0208), United States Government Work",
+    "link": "https://www.flickr.com/photos/whitehouse/55630953880",
+    "position": "50% 74%"
+  }
+}

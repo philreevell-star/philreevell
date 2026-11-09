@@ -53,23 +53,23 @@ body { background: #2d3036; font-family: var(--serif); color: var(--parch); }
   color: var(--parch-mute);
   letter-spacing: 0.02em;
 }
-.eyebrow { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.42em; text-transform: uppercase; color: var(--red); font-weight: 600; display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+.eyebrow { font-family: var(--sans); font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: #e07a66; font-weight: 600; display:flex; align-items:center; gap:10px; margin-bottom:14px; }
 .eyebrow::before { content:""; width:20px; height:1px; background: var(--red); display:inline-block; }
 h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-size: clamp(2.2rem, 7vw, 3.2rem); line-height: 0.98; letter-spacing:-0.01em; }
 .tagline { font-family: var(--serif); font-style: italic; color: rgba(242,232,204,0.45); font-size: 1rem; margin-top: 10px; max-width: 48ch; }
 
-.section-label { font-family: var(--sans); font-size: 0.6rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--red); font-weight: 600; display:flex; align-items:center; gap:10px; padding-bottom: 10px; border-bottom: 1px solid rgba(242,232,204,0.12); margin: 40px 0 18px; }
-.section-label::before { content:""; width:20px; height:1px; background: var(--red); display:inline-block; }
-.section-label.navy { color: var(--navy-lt); }
-.section-label.navy::before { background: var(--navy-lt); }
+.section-label { font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--parch); font-weight: 700; display:flex; align-items:center; gap:10px; padding-bottom: 10px; border-bottom: 1px solid rgba(242,232,204,0.12); margin: 40px 0 18px; }
+.section-label::before { content:""; width:24px; height:3px; background: var(--red-lt); display:inline-block; }
+.section-label.navy { color: var(--parch); }
+.section-label.navy::before { background: #6a9ad0; }
 
 /* automated ledger */
 .ledger { background: rgba(158,42,26,0.07); border-left: 2px solid var(--red); padding: 18px 20px; }
 .ledger-grid { display:grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
-.ledger-item dt { font-family: var(--sans); font-size: 0.62rem; color: var(--parch-mute); }
+.ledger-item dt { font-family: var(--sans); font-size: 0.72rem; color: var(--parch-dim); }
 .ledger-item dd { font-family: var(--display); font-weight:700; font-size: 1.1rem; color: var(--parch); margin-top:2px; }
 .ledger-item dd.long { font-family: var(--serif, Georgia, serif); font-weight:400; font-size: 0.95rem; line-height:1.45; }
-.ledger-source { grid-column: 1/-1; font-family: var(--sans); font-size: 0.6rem; color: var(--parch-mute); border-top: 1px dashed rgba(158,42,26,0.35); padding-top: 10px; margin-top: 4px; }
+.ledger-source { grid-column: 1/-1; font-family: var(--sans); font-size: 0.68rem; color: var(--parch-dim); border-top: 1px dashed rgba(158,42,26,0.35); padding-top: 10px; margin-top: 4px; }
 
 .row { display:grid; grid-template-columns: 130px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(242,232,204,0.08); }
 .headline-clip {
@@ -79,14 +79,14 @@ h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-siz
 .podcast-link, .paywall-note {
   font-family: var(--sans); font-size: 0.72rem; margin-top: 4px; display: inline-block;
 }
-.podcast-link { color: var(--red-lt); text-decoration: none; border-bottom: 1px solid rgba(192,64,48,0.4); }
+.podcast-link { color: #e07a66; text-decoration: none; border-bottom: 1px solid rgba(224,122,102,0.5); font-family: var(--sans); font-size: 0.8rem; }
 .paywall-note { color: var(--parch-mute); font-style: italic; }
 .row:last-child { border-bottom:none; }
 .outlet { font-family: var(--display); font-weight:700; font-size: 0.92rem; color: var(--parch); }
 .summary { font-family: var(--serif); font-size: 0.92rem; color: var(--parch-dim); line-height:1.6; }
-.summary a { color: var(--red-lt); text-decoration:none; border-bottom:1px solid rgba(192,64,48,0.5); }
+.summary a { color: #e07a66; text-decoration:none; border-bottom:1px solid rgba(192,64,48,0.5); }
 
-.auto-tag { font-family: var(--sans); font-size: 0.56rem; letter-spacing:.12em; text-transform:uppercase; color: var(--parch-mute); float:right; border:1px solid rgba(242,232,204,0.15); padding:2px 7px; border-radius:2px; }
+.auto-tag { font-family: var(--sans); font-size: 0.62rem; letter-spacing:.1em; text-transform:uppercase; color: var(--parch-dim); margin-left:auto; font-weight:500; float:right; border:1px solid rgba(242,232,204,0.15); padding:2px 7px; border-radius:2px; }
 
 /* manual: archive */
 .archive-item { display:grid; grid-template-columns: 90px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(242,232,204,0.08); }
@@ -108,15 +108,26 @@ h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-siz
 .substack-link { display:inline-block; margin-top: 10px; font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 600; color: var(--navy-lt); text-decoration:none; border-bottom: 1px solid rgba(80,128,176,0.5); }
 
 .wildcard { margin-top: 34px; background: rgba(158,42,26,0.08); border-left: 2px solid var(--red); padding: 20px 22px; }
-.wildcard-label { font-family: var(--sans); font-size: 0.56rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--red); font-weight:600; margin-bottom: 10px; }
+.wildcard-label { font-family: var(--sans); font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; color: #e07a66; font-weight:700; margin-bottom: 10px; }
 
 footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(242,232,204,0.1); font-family: var(--sans); font-size: 0.64rem; color: var(--parch-mute); line-height:1.7; }
 
+@media (max-width: 520px) { .edition-list a { flex-direction: column; gap: 2px; } .ed-date { width:auto; } }
 @media (max-width: 520px) {
   .top-nav, .wrap { padding-left:20px; padding-right:20px; }
   .row, .archive-item { grid-template-columns: 1fr; gap:4px; }
   .ledger-grid { grid-template-columns: 1fr 1fr; }
 }
+/* edition archive */
+.archive-banner { display:none; margin: 0 0 22px; padding: 12px 16px; border-left: 3px solid #6a9ad0; background: rgba(80,128,176,0.12); font-family: var(--sans); font-size: 0.85rem; color: var(--parch); line-height:1.5; }
+.archive-banner a { color: #9cc0e8; }
+.edition-list { list-style:none; margin:0; padding:0; }
+.edition-list li { border-bottom: 1px solid rgba(242,232,204,0.1); }
+.edition-list a { display:flex; gap:18px; padding: 14px 2px; text-decoration:none; color: var(--parch); align-items:baseline; }
+.edition-list a:hover .ed-title { color: #9cc0e8; }
+.ed-date { font-family: var(--sans); font-size: 0.78rem; font-weight:600; color: #9cc0e8; width: 9.5em; flex-shrink:0; }
+.ed-title { font-family: var(--serif); font-size: 1rem; line-height:1.45; }
+.ed-current { font-family: var(--sans); font-size: 0.62rem; letter-spacing:.1em; text-transform:uppercase; color: var(--parch-dim); border:1px solid rgba(242,232,204,0.25); padding:1px 6px; border-radius:2px; margin-left:8px; white-space:nowrap; }
 </style>
 </head>
 <body>
@@ -132,7 +143,8 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
 
   <div class="masthead">
     <div class="eyebrow">America · US Edition</div>
-    <h1>The Road to 2028: This Week's Edition</h1>
+    <div class="archive-banner" id="archiveBanner"></div>
+    <h1 id="edTitle">The Road to 2028: This Week's Edition</h1>
     <p class="tagline">A closer look, drawing on a decade covering US elections — this week's numbers, the papers' angles, what the podcasts are chewing over, and how it connects to what I've reported before.</p>
   </div>
 
@@ -152,7 +164,7 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
   <div class="ledger">
     <dl class="ledger-grid">
       <div class="ledger-item"><dt id="edBallotLabel">House result</dt><dd class="long" id="edBallot">Democrats win the House. Minority Leader Jeffries says they will hold at least 255 seats; CBS News has them on pace for 256, the biggest majority since Democrats held 257 in 2009 (CBS News, Nov. 4–5, 2026)</dd></div>
-      <div class="ledger-item"><dt id="edSenateLabel">Senate</dt><dd class="long" id="edSenate">Democrats take control with at least 54 seats, including upsets in Texas, Kansas and South Carolina. Alaska and Mississippi still too close to call (CBS News, Nov. 5, 2026)</dd></div>
+      <div class="ledger-item" id="edSenateItem"><dt id="edSenateLabel">Senate</dt><dd class="long" id="edSenate">Democrats take control with at least 54 seats, including upsets in Texas, Kansas and South Carolina. Alaska and Mississippi still too close to call (CBS News, Nov. 5, 2026)</dd></div>
       <div class="ledger-item"><dt id="edApprovalLabel">Trump approval (exit poll)</dt><dd class="long" id="edApproval">38% approve in the NBC News Exit Poll, down from 45% at his first midterm in 2018 and the lowest for a sitting president on Election Day in nearly two decades (NBC News, Nov. 3–4, 2026)</dd></div>
       <div class="ledger-item"><dt>2028 GOP frontrunners</dt><dd id="edGop">Vance, Rubio</dd></div>
       <div class="ledger-item"><dt>2028 Dem frontrunners</dt><dd id="edDem">Buttigieg, Newsom, AOC</dd></div>
@@ -186,6 +198,7 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
   </div>
 
   <!-- ══ MANUAL — Phil edits these directly, edition to edition ══ -->
+  <div id="fromArchive">
   <div class="section-label navy">From the Archive</div>
   <div class="archive-item">
     <div class="archive-year">2024</div>
@@ -193,6 +206,12 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       <div class="archive-title">US Local News: On the Front Page Front Line</div>
       <div class="archive-desc">The Marion County Record was raided by police in August 2023; its 98-year-old co-owner died of a heart attack the day after officers searched her home and seized the newsroom's computers. The paper kept publishing. That story sits underneath this week's results: the races that went down to the wire, in Alaska and Mississippi, are being counted in places whose local papers have the thinnest resources to follow every ballot, while national outlets have already moved on to 2028. Worth asking, each week: which stories aren't getting the Marion County treatment — the ones nobody's watching closely enough to notice when they go wrong. <a href="america-localnews.html">Read the original piece →</a></div>
     </div>
+  </div>
+  </div>
+
+  <div id="pastEditions" style="display:none">
+    <div class="section-label navy">Past Editions</div>
+    <ul class="edition-list" id="editionList"></ul>
   </div>
 
   <footer class="foot">
@@ -204,9 +223,29 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
 <script>
   // Same feed as the homepage Briefing card -- keeps the two in sync
   // without duplicating the fetch/generation logic.
-  fetch('data/briefing.json')
+  // ?edition=YYYY-MM-DD loads a saved past edition from data/editions/;
+  // with no parameter the page shows the current edition (data/briefing.json).
+  const editionParam = new URLSearchParams(location.search).get('edition');
+  const archiveDate = /^\d{4}-\d{2}-\d{2}$/.test(editionParam || '') ? editionParam : null;
+  const fmtDate = iso => new Date(iso + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+
+  if (archiveDate) {
+    const banner = document.getElementById('archiveBanner');
+    banner.innerHTML = `You're reading an archived edition from <b>${fmtDate(archiveDate)}</b>. Figures and headlines are as published then. <a href="america-us-edition.html">Read this week's edition →</a>`;
+    banner.style.display = 'block';
+    document.getElementById('edTitle').textContent = `The Road to 2028: Edition of ${fmtDate(archiveDate)}`;
+    document.title = `US Edition, ${fmtDate(archiveDate)} — Phil Reevell`;
+    // The hand-written archive essay belongs to the current edition only.
+    document.getElementById('fromArchive').style.display = 'none';
+  }
+
+  fetch(archiveDate ? `data/editions/${archiveDate}.json` : 'data/briefing.json')
     .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
     .then(d => {
+      // Older editions carry no labels or Senate line; fall back to the pre-election defaults.
+      document.getElementById('edBallotLabel').textContent = d.ballot_label || 'Generic ballot (avg)';
+      document.getElementById('edApprovalLabel').textContent = d.approval_label || 'Trump approval';
+      document.getElementById('edSenateItem').style.display = d.senate ? '' : 'none';
       if (d.ballot) document.getElementById('edBallot').textContent = d.ballot;
       if (d.approval) document.getElementById('edApproval').textContent = d.approval;
       if (d.ballot_label) document.getElementById('edBallotLabel').textContent = d.ballot_label;
@@ -253,7 +292,35 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       const wild = typeof d.wildcard === 'string' ? d.wildcard : (d.wildcard && d.wildcard.summary);
       if (wild) document.getElementById('edWildcard').textContent = wild;
     })
-    .catch(() => { /* static fallback content stays as-is */ });
+    .catch(() => {
+      if (archiveDate) document.getElementById('archiveBanner').innerHTML = `No saved edition was found for that date. <a href="america-us-edition.html">Read this week's edition →</a>`;
+    });
+
+  // Past Editions list, newest first, from data/editions/index.json.
+  fetch('data/editions/index.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(idx => {
+      const eds = (idx.editions || []).slice().sort((a, b) => b.date.localeCompare(a.date));
+      if (!eds.length) return;
+      const latest = eds[0].date;
+      const list = document.getElementById('editionList');
+      eds.forEach(e => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = e.date === latest ? 'america-us-edition.html' : `america-us-edition.html?edition=${e.date}`;
+        const dt = document.createElement('span'); dt.className = 'ed-date'; dt.textContent = fmtDate(e.date);
+        const t = document.createElement('span'); t.className = 'ed-title'; t.textContent = e.title || '';
+        if (e.date === (archiveDate || latest)) {
+          const tag = document.createElement('span'); tag.className = 'ed-current';
+          tag.textContent = archiveDate ? 'Reading now' : 'This week';
+          t.appendChild(tag);
+        }
+        a.append(dt, t); li.appendChild(a); list.appendChild(li);
+      });
+      document.getElementById('pastEditions').style.display = '';
+      if (location.hash === '#pastEditions') document.getElementById('pastEditions').scrollIntoView();
+    })
+    .catch(() => { /* list stays hidden */ });
 
   // Redraws the ballot trend chart from data/briefing-history.json once it
   // has grown beyond the 7 points seeded from Silver Bulletin's public

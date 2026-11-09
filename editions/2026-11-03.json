@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-11-03T08:00:00Z",
+  "phase": "election-day",
+  "ballot": "Dem +8.9 (Silver Bulletin, Nov 2, 2026)",
+  "approval": "37 / 61 (cross-aggregator average, Nov 2, 2026)",
+  "gop_2028": "Vance, Rubio",
+  "dem_2028": "Buttigieg, Newsom, AOC",
+  "ledger_source": "Aggregates: Silver Bulletin, Decision Desk HQ · early positioning: Emerson College Polling",
+  "headlines": [
+    {
+      "outlet": "NBC News / Washington Post",
+      "headline": "Michigan Democrat crosses party lines",
+      "summary": "Rep. Haley Stevens, who lost the Michigan Senate primary to Abdul El-Sayed, publicly endorsed Republican Mike Rogers on Nov. 1 — the most unusual case of intra-party defection in a top-tier Senate race this cycle, following days of public friction over an ad Stevens called antisemitic.",
+      "url": "https://www.nbcnews.com/politics/2026-election/haley-stevens-endorses-gop-mike-rogers-michigan-senate-race-el-sayed-rcna606831"
+    },
+    {
+      "outlet": "CBS News",
+      "headline": "Five Senate toss-ups, Cruz's warning",
+      "summary": "CBS's data desk rates Maine, Michigan, Ohio, Texas and Alaska as Senate toss-ups and newly moved South Carolina to lean-R after a tied NYT/Siena poll. Sen. Ted Cruz publicly warned Republicans could lose Texas and both chambers if conservative turnout lags.",
+      "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "headline": "Trump, Obama trade closing arguments",
+      "summary": "Dueling rallies in Georgia and Ohio in the campaign's final days: Obama framed the Iran war's cost to consumers campaigning for Sen. Jon Ossoff, while Trump defended his foreign-policy record campaigning for Ohio's Vivek Ramaswamy.",
+      "url": "https://www.aljazeera.com/news/2026/10/29/obama-and-trump-rally-in-georgia-and-ohio-key-takeaways"
+    },
+    {
+      "outlet": "CBS News",
+      "headline": "Alaska \"two Sullivans\" suit dismissed",
+      "summary": "A federal judge dismissed the DOJ's lawsuit seeking to block certification of Alaska's Senate race over a second, same-named candidate on the ballot, ruling the government lacked standing. A separate DOJ criminal probe continues.",
+      "url": "https://www.cbsnews.com/news/judge-doj-lawsuit-alaska-senate-race-dan-sullivan/"
+    },
+    {
+      "outlet": "University of Florida Election Lab (via CBS)",
+      "headline": "Early voting tops 49.6 million",
+      "summary": "Roughly 49.6 million early votes had been cast nationally as of the final weekend before Election Day — a marker of unusually high engagement heading into Nov. 3.",
+      "url": "https://www.cbsnews.com/live-updates/2026-midterm-elections-campaigns-weekend-before/"
+    }
+  ],
+  "podcasts": [
+    {
+      "show": "Bulwark Takes (The Bulwark)",
+      "summary": "\"Three Days Until the Midterms. How Bad Could It Get for Republicans?\" (Nov 1) — Bill Kristol and Sarah Longwell on disillusioned Trump voters in her focus groups, Democratic openings in red states, and live reaction to the Stevens/Rogers endorsement.",
+      "url": "https://www.thebulwark.com/p/three-days-until-the-midterms-how"
+    },
+    {
+      "show": "NPR",
+      "summary": "\"Can I trust the polls? And other questions from listeners about the 2026 midterms\" (Oct 31) — NPR's politics team answers listener questions on polling reliability heading into Election Day.",
+      "url": "https://www.npr.org/2026/10/31/g-s1-149981/listener-questions-npr-midterms-2026-election"
+    },
+    {
+      "show": "Pod Save America (Crooked Media)",
+      "summary": "\"Have Republicans Already Blown the Midterms?\" (Oct 18) — Dan Pfeiffer interviews Cook Political Report's Amy Walter on whether redistricting backfired on the GOP and whether the numbers show a Democratic wave.",
+      "url": "https://crooked.com/podcast/have-republicans-already-blown-the-midterms/"
+    }
+  ],
+  "wildcard": "A federal judge dismissed a Trump DOJ lawsuit that sought to block certification of Alaska's Senate race over a second candidate who happens to share Sen. Dan Sullivan's exact name — one of the stranger ballot disputes of the cycle, with a separate criminal probe still open.",
+  "week_photo": {
+    "src": "photos/2026-09-25-trump-xi.jpg",
+    "alt": "Trump shows Xi the White House's painting of the July 2024 assassination attempt, during Xi's state visit, September 2026.",
+    "caption": "Trump & Xi at the White House, Sept 24–25 — Official White House Photo"
+  }
+}
