@@ -948,9 +948,23 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-bottom: 24px;
-  align-items: start;
+  align-items: stretch;
 }
 .america-cards-grid .america-coming { margin-bottom: 0; }
+/* featured essay card */
+.america-essay { display:flex; flex-direction:column; }
+.america-essay-pair { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin: 4px 0 6px; }
+.america-essay-photo { position:relative; display:block; }
+.america-essay-photo img { width:100%; height:200px; object-fit:cover; object-position:50% 70%; display:block; border:1px solid rgba(242,232,204,0.12); }
+.america-essay-year { position:absolute; left:0; bottom:0; background:rgba(13,11,8,0.82); color:var(--parch); font-family:var(--sans); font-size:0.7rem; font-weight:700; letter-spacing:0.18em; padding:6px 10px; }
+.america-essay-caption { font-family:var(--sans); font-size:0.68rem; color:rgba(242,232,204,0.6); margin-bottom:14px; }
+.america-essay .america-coming-desc { font-size:0.95rem; }
+.america-essay-byline { font-family:var(--sans); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:rgba(242,232,204,0.65); margin:-4px 0 14px; }
+.america-essay-quote { font-family:var(--display); font-style:italic; font-size:0.98rem; line-height:1.5; color:var(--parch); border-left:2px solid #e07a66; padding:2px 0 2px 16px; margin:16px 0 4px; }
+.america-essay-links { display:flex; flex-wrap:wrap; gap:12px 26px; margin-top:auto; padding-top:20px; }
+.america-essay-links a { font-family:var(--sans); font-size:0.78rem; letter-spacing:0.14em; text-transform:uppercase; font-weight:700; color:#e07a66; text-decoration:none; border-bottom:1px solid rgba(224,122,102,0.4); padding-bottom:2px; }
+.america-essay-links a.secondary { color:rgba(242,232,204,0.8); border-bottom-color:rgba(242,232,204,0.3); }
+.america-essay-links a:hover { color:var(--parch); }
 .america-brief {
   background: rgba(26,48,84,0.22);
   border-left: 2px solid #5080b0;
@@ -1644,12 +1658,28 @@ footer {
       <div style="font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--gilt); margin-bottom: 14px;">Inquiry: America</div>
       <p class="america-desc">Politics, economics, and culture — reported from the ground up. A decade of dispatches from a country under pressure.</p>
       <div class="america-cards-grid">
-        <a class="america-coming" href="america-ten-years.html" style="display:block;text-decoration:none;color:inherit">
+        <div class="america-coming america-essay">
           <div class="america-coming-label">Featured · Essay · 9 November 2026</div>
-          <div class="america-coming-title">Ten Years After 2016</div>
-          <div class="america-coming-desc">In 2016 the polls missed Trump's win. This time they saw a Democratic wave coming — yet the scale, and the loss of Texas, still came as a shock. Is the reverberation of 2016 finally ending?</div>
-          <div style="margin-top:16px;font-family:var(--sans);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:#e07a66">Read the essay →</div>
-        </a>
+          <a href="america-ten-years.html" style="text-decoration:none;color:inherit"><div class="america-coming-title">Ten Years After 2016</div></a>
+          <div class="america-essay-byline">Phil Reevell · New York</div>
+          <div class="america-essay-pair">
+            <a href="america-ten-years.html" class="america-essay-photo" aria-label="Read the essay">
+              <img src="photos/2016-11-08-times-square.jpg" alt="ABC News election-night screens in Times Square in 2016 showing early results: Clinton 3 electoral votes, Trump 19." loading="lazy">
+              <span class="america-essay-year">8 NOV 2016</span>
+            </a>
+            <a href="america-ten-years.html" class="america-essay-photo" aria-label="Read the essay">
+              <img src="photos/2026-11-08-west-palm-beach.jpg" alt="President Trump speaks to reporters at night before boarding Air Force One in West Palm Beach, Florida, 8 November 2026." loading="lazy" style="object-position:58% 50%">
+              <span class="america-essay-year">8 NOV 2026</span>
+            </a>
+          </div>
+          <div class="america-essay-caption">Left: Times Square on election night 2016 · Photo: Phil Reevell. Right: President Trump speaks to reporters in West Palm Beach, Florida, 8 November 2026 · <a href="https://www.flickr.com/photos/whitehouse/" target="_blank" rel="noopener" style="color:inherit">Official White House Photo by Patrick Witty</a></div>
+          <div class="america-coming-desc">Ten years ago this week I was in Washington, editing a documentary as America came to terms with Donald Trump's first win. Now I'm in New York as the country processes the Democrats' mid-term tsunami. In 2016 the polls missed the result; this time they saw the wave coming, yet its scale, above all the loss of Texas, still came as a shock.</div>
+          <div class="america-essay-quote">“It’s a very different shock to that which could be felt in November 2016 — and part of the process going on today is assessing whether that reverberation has now ended.”</div>
+          <div class="america-essay-links">
+            <a href="america-ten-years.html">Read the essay →</a>
+            <a href="america-documentaries.html#how-to-win" class="secondary">Listen: 2016 documentary →</a>
+          </div>
+        </div>
         <div class="america-brief">
           <div class="america-brief-top">
             <span class="america-brief-label">Weekly Briefing</span>
