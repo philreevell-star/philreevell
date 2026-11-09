@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>American Documentaries — Phil Reevell</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ocean:#0b1c2a;--ocean-mid:#0f2235;
+  --parch:#f2e8cc;--parch-dim:rgba(242,232,204,0.65);--parch-mute:rgba(242,232,204,0.32);
+  --gilt:#c69030;--gilt-lt:#e0ac3a;--white:#f8f4ea;--ink:#1a1208;
+  --red:#9e2a1a;--red-lt:#c03520;
+  --rule:rgba(198,144,48,0.32);--rule-lt:rgba(198,144,48,0.12);
+  --sans:'DM Sans',system-ui,sans-serif;
+  --serif:'Source Serif 4',Georgia,serif;
+  --display:'Libre Baskerville',Georgia,serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#f5f0e8;font-family:var(--serif);color:var(--ink);overflow-x:hidden;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:#0f0d0a;border-bottom:2px solid var(--red);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;}
+.nav-logo{font-family:var(--display);font-style:italic;font-size:1.05rem;color:var(--gilt);text-decoration:none;display:flex;align-items:baseline;gap:8px;}
+.nav-logo em{font-style:normal;font-family:var(--sans);font-size:0.6rem;letter-spacing:0.3em;text-transform:uppercase;color:var(--parch-mute);font-weight:300;}
+.nav-back{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--parch-mute);text-decoration:none;display:flex;align-items:center;gap:6px;transition:color 0.2s;}
+.nav-back::before{content:"←";}
+.nav-back:hover{color:var(--gilt);}
+@media(max-width:700px){nav{padding:0 20px;}}
+
+/* HERO — Gary image full bleed with overlay */
+.article-hero{
+  position:relative;
+  min-height:72vh;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  overflow:hidden;
+  background:#0f0d0a;
+  
+  background-size:cover;
+  background-position:center 15%;
+}
+.article-hero::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(15,13,10,0.05) 0%,
+    rgba(15,13,10,0.0) 20%,
+    rgba(15,13,10,0.35) 60%,
+    rgba(15,13,10,0.88) 100%
+  );
+}
+.article-hero-content{
+  position:relative;z-index:2;
+  padding:48px 64px;
+  max-width:760px;
+}
+.article-strand{font-family:var(--sans);font-size:0.58rem;letter-spacing:0.42em;text-transform:uppercase;color:var(--red-lt);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:10px;}
+.article-strand::before{content:"";display:inline-block;width:20px;height:1px;background:var(--red-lt);}
+.article-title{font-family:var(--display);font-weight:700;font-size:clamp(1.8rem,4vw,3.5rem);line-height:0.96;color:var(--white);margin-bottom:14px;letter-spacing:-0.01em;}
+.article-deck{font-family:var(--serif);font-size:1.02rem;font-style:italic;color:var(--parch-dim);line-height:1.65;max-width:580px;margin-bottom:20px;}
+.article-meta{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.15em;color:rgba(247,243,236,0.4);display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+.article-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--red-lt);opacity:0.5;}
+.hero-credit{position:absolute;bottom:20px;right:20px;z-index:2;font-family:var(--sans);font-size:0.5rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(247,243,236,0.2);}
+
+/* BODY */
+.article-body{max-width:1100px;margin:0 auto;padding:56px 48px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start;}
+
+/* Listen button */
+.listen-block{
+  background:#0f0d0a;
+  border-left:3px solid var(--red);
+  padding:20px 24px;
+  margin-bottom:32px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.listen-label{font-family:var(--sans);font-size:0.58rem;letter-spacing:0.35em;text-transform:uppercase;color:rgba(247,243,236,0.4);font-weight:600;margin-bottom:4px;}
+.listen-title{font-family:var(--display);font-size:0.95rem;font-weight:700;color:var(--parch);line-height:1.2;}
+.listen-btn{font-family:var(--sans);font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;background:var(--red);color:var(--white);padding:10px 20px;text-decoration:none;white-space:nowrap;transition:background 0.2s;flex-shrink:0;}
+.listen-btn:hover{background:var(--red-lt);}
+
+/* BBC screenshot */
+.bbc-screenshot{margin-bottom:32px;}
+.bbc-screenshot img{width:100%;display:block;border:1px solid rgba(26,18,8,0.08);}
+.bbc-screenshot-caption{font-family:var(--sans);font-size:0.68rem;color:rgba(26,18,8,0.4);letter-spacing:0.08em;margin-top:8px;}
+
+/* Article text */
+.article-text p{font-family:var(--serif);font-size:1rem;line-height:1.82;color:rgba(26,18,8,0.82);margin-bottom:20px;}
+.article-text p:first-child::first-letter{font-family:var(--display);font-size:3.2rem;font-weight:700;float:left;line-height:0.85;margin:4px 8px 0 0;color:var(--red);}
+.pull-quote{border-left:3px solid var(--red);padding:16px 20px;margin:28px 0;background:rgba(158,42,26,0.04);}
+.pull-quote p{font-family:var(--display);font-size:1.02rem;font-style:italic;color:var(--ink);line-height:1.6;margin-bottom:0 !important;}
+.pull-quote-attr{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:rgba(26,18,8,0.35);margin-top:8px;}
+
+/* Sidebar */
+.article-sidebar{position:sticky;top:72px;}
+.sidebar-block{background:white;border:1px solid rgba(26,18,8,0.08);padding:24px;margin-bottom:16px;}
+.sidebar-block-label{font-family:var(--sans);font-size:0.57rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gilt);font-weight:600;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(26,18,8,0.08);}
+.sidebar-block p{font-family:var(--serif);font-size:0.85rem;color:rgba(26,18,8,0.55);line-height:1.6;margin-bottom:10px;font-style:italic;}
+.sidebar-block p:last-of-type{margin-bottom:0;}
+.sidebar-link{display:block;margin-top:12px;font-family:var(--sans);font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--red);text-decoration:none;border-bottom:1px solid rgba(158,42,26,0.3);padding-bottom:2px;transition:color 0.2s;font-weight:500;}
+.sidebar-link:hover{color:var(--red-lt);}
+.sidebar-cook{background:#0f0d0a;border:1px solid rgba(198,144,48,0.15);padding:24px;}
+.sidebar-cook-label{font-family:var(--sans);font-size:0.57rem;letter-spacing:0.35em;text-transform:uppercase;color:var(--gilt);font-weight:600;margin-bottom:8px;}
+.sidebar-cook-title{font-family:var(--display);font-size:1rem;font-weight:700;color:var(--parch);margin-bottom:8px;line-height:1.2;}
+.sidebar-cook p{font-family:var(--serif);font-size:0.82rem;font-style:italic;color:var(--parch-mute);line-height:1.55;margin-bottom:14px;}
+.sidebar-cook-btn{display:block;font-family:var(--sans);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;color:var(--gilt);text-decoration:none;border-bottom:1px solid rgba(198,144,48,0.3);padding-bottom:2px;transition:color 0.2s;}
+.sidebar-cook-btn:hover{color:var(--gilt-lt);}
+
+footer{background:#0f0d0a;border-top:2px solid var(--red);padding:32px 48px;display:flex;align-items:center;justify-content:space-between;}
+.footer-brand{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--gilt);}
+.footer-links{display:flex;gap:24px;list-style:none;}
+.footer-links a{font-family:var(--sans);font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(247,243,236,0.3);text-decoration:none;transition:color 0.2s;}
+.footer-links a:hover{color:var(--gilt);}
+
+@media(max-width:900px){
+  .article-hero-content{padding:40px 28px;}
+  .article-body{grid-template-columns:1fr;padding:40px 28px;}
+  .article-sidebar{position:static;}
+  .listen-block{flex-direction:column;align-items:flex-start;}
+  footer{flex-direction:column;gap:16px;padding:28px;}
+}
+
+/* documentary archive */
+.doc-list{display:flex;flex-direction:column;gap:20px;}
+.doc-card{display:grid;grid-template-columns:120px 1fr;gap:28px;background:white;border:1px solid rgba(26,18,8,0.08);border-left:3px solid var(--red);padding:28px 30px;text-decoration:none;color:inherit;transition:border-color .2s, box-shadow .2s;}
+.doc-card:hover{box-shadow:0 4px 18px rgba(26,18,8,0.08);border-left-color:var(--gilt);}
+.doc-year{font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--red);line-height:1;}
+.doc-org{font-family:var(--sans);font-size:0.7rem;letter-spacing:0.08em;color:rgba(26,18,8,0.6);margin-top:8px;line-height:1.4;}
+.doc-strand{font-family:var(--sans);font-size:0.68rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:6px;}
+.doc-title{font-family:var(--display);font-size:1.35rem;font-weight:700;color:var(--ink);line-height:1.25;margin-bottom:10px;}
+.doc-desc{font-family:var(--serif);font-size:1rem;line-height:1.7;color:rgba(26,18,8,0.8);}
+.doc-more{display:inline-block;margin-top:12px;font-family:var(--sans);font-size:0.78rem;font-weight:600;color:var(--red);}
+@media(max-width:700px){.doc-card{grid-template-columns:1fr;gap:10px;padding:22px 20px;}}
+.doc-card.has-player{display:grid;}
+.doc-player{grid-column:1/-1;margin-top:6px;}
+.doc-player iframe{display:block;width:100%;border:0;}
+.doc-credit{font-family:var(--sans);font-size:0.7rem;color:rgba(26,18,8,0.5);margin-top:6px;}
+.doc-credit a{color:inherit;}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="https://philreevell.com" class="nav-logo">Phil Reevell <em>Inquiry</em></a>
+  <a href="https://philreevell.com#america" class="nav-back">America</a>
+</nav>
+
+<div class="article-hero" style="min-height:0;padding-top:72px;">
+  <div class="article-hero-content">
+    <div class="article-strand">America · Archive</div>
+    <h1 class="article-title">American Documentaries</h1>
+    <p class="article-deck">Radio documentaries made in the United States for BBC World Service, on what is changing in American life.</p>
+  </div>
+</div>
+
+<div class="article-body" style="display:block;max-width:880px;">
+  <div class="doc-list">
+
+    <a class="doc-card" href="america-localnews.html">
+      <div><div class="doc-year">2024</div><div class="doc-org">BBC World Service<br>The Documentary</div></div>
+      <div>
+        <div class="doc-strand">Politics</div>
+        <div class="doc-title">US Local News 2024: On the Front Page Front Line</div>
+        <div class="doc-desc">Gary O'Donoghue visits small-town papers in Kansas, Colorado and Iowa during a divisive Presidential election. The Marion County Record — raided by police, its editor's mother dead two days later — was still publishing.</div>
+        <span class="doc-more">Read and listen →</span>
+      </div>
+    </a>
+
+    <a class="doc-card" href="america-opioid.html">
+      <div><div class="doc-year">2018</div><div class="doc-org">BBC World Service<br>with the Courier Journal</div></div>
+      <div>
+        <div class="doc-strand">Social</div>
+        <div class="doc-title">Everyday Americans: The Opioid Crisis</div>
+        <div class="doc-desc">Reporting from Louisville, Kentucky on record levels of deaths from opioid addiction, made in partnership with the city's Courier Journal newspaper.</div>
+        <span class="doc-more">Read and listen →</span>
+      </div>
+    </a>
+
+    <div class="doc-card has-player" id="how-to-win">
+      <div><div class="doc-year">2016</div><div class="doc-org">BBC World Service<br>Presented by Katty Kay</div></div>
+      <div>
+        <div class="doc-strand">Politics</div>
+        <div class="doc-title">How to Win a US Election</div>
+        <div class="doc-desc">The 2016 Presidential race seen from the winning side, days after Donald Trump's victory: the turning points of the campaign, from the debates to the leaked recording, and Trump supporters in Pennsylvania on what drove their vote.</div>
+      </div>
+      <div class="doc-player">
+        <iframe height="166" scrolling="no" allow="autoplay; encrypted-media" title="How to Win a US Election — SoundCloud player" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A293850451&color=%239e2a1a&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=false"></iframe>
+        <div class="doc-credit"><a href="https://soundcloud.com/smithysound/how-to-win-a-us-election" target="_blank" rel="noopener">Listen on SoundCloud →</a></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-brand">Phil Reevell</div>
+  <ul class="footer-links">
+    <li><a href="https://philreevell.com">Home</a></li>
+    <li><a href="https://philreevell.com#america">America</a></li>
+    <li><a href="https://philreevell.com#about">About</a></li>
+    <li><a href="https://philreevell-star.github.io/cookinthepacific/">Cook in the Pacific</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>

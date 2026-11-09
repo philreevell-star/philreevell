@@ -913,33 +913,33 @@ footer {
   max-width: 480px;
 }
 .america-coming {
-  background: rgba(158,42,26,0.13);
-  border-left: 2px solid #9e2a1a;
-  padding: 16px 20px;
+  background: rgba(158,42,26,0.16);
+  border-left: 3px solid #c04030;
+  padding: 22px 24px;
   margin-bottom: 24px;
 }
 .america-coming-label {
   font-family: var(--sans);
-  font-size: 0.58rem;
-  letter-spacing: 0.3em;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #9e2a1a;
-  font-weight: 600;
-  margin-bottom: 4px;
+  color: #e07a66;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 .america-coming-title {
   font-family: var(--display);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--parch);
-  margin-bottom: 4px;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 .america-coming-desc {
   font-family: var(--serif);
-  font-size: 0.83rem;
-  font-style: italic;
-  color: rgba(242,232,204,0.45);
-  line-height: 1.5;
+  font-size: 1rem;
+  color: rgba(242,232,204,0.85);
+  line-height: 1.6;
 }
 
 /* ── America opening grid: Featured Documentary + weekly Briefing side by side ── */
@@ -1644,11 +1644,12 @@ footer {
       <div style="font-family: var(--display); font-style: italic; font-size: 1.05rem; color: var(--gilt); margin-bottom: 14px;">Inquiry: America</div>
       <p class="america-desc">Politics, economics, and culture — reported from the ground up. A decade of dispatches from a country under pressure.</p>
       <div class="america-cards-grid">
-        <div class="america-coming">
-          <div class="america-coming-label">Featured · BBC World Service 2024</div>
-          <div class="america-coming-title">US Local News: On the Front Page Front Line</div>
-          <div class="america-coming-desc">Gary O'Donoghue visits small-town papers in Kansas, Colorado, and Iowa during a divisive Presidential election. The Marion County Record — raided by police, its editor's mother dead two days later — was still publishing.</div>
-        </div>
+        <a class="america-coming" href="america-ten-years.html" style="display:block;text-decoration:none;color:inherit">
+          <div class="america-coming-label">Featured · Essay · 9 November 2026</div>
+          <div class="america-coming-title">Ten Years After 2016</div>
+          <div class="america-coming-desc">In 2016 the polls missed Trump's win. This time they saw a Democratic wave coming — yet the scale, and the loss of Texas, still came as a shock. Is the reverberation of 2016 finally ending?</div>
+          <div style="margin-top:16px;font-family:var(--sans);font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:#e07a66">Read the essay →</div>
+        </a>
         <div class="america-brief">
           <div class="america-brief-top">
             <span class="america-brief-label">Weekly Briefing</span>
@@ -1680,7 +1681,7 @@ footer {
         <span class="america-strand social">Social</span>
         <span class="america-strand culture">Culture</span>
       </div>
-      <a href="america-localnews.html" class="america-btn">US Local News →</a>
+      <a href="america-documentaries.html" class="america-btn">American documentaries →</a>
 
       <div class="america-latest" id="americaLatest" style="display:none;">
         <div class="america-latest-label">Latest</div>
@@ -1897,6 +1898,15 @@ footer {
     </div>
 
     <div class="post-list fade-in">
+
+      <a href="america-ten-years.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
+        <div class="post-date">Nov 2026</div>
+        <div>
+          <div class="post-title">Ten Years After 2016</div>
+          <div class="post-excerpt">From a Washington edit suite in 2016 to New York after the 2026 midterms: two shocks, ten years apart.</div>
+        </div>
+        <div class="post-arrow">→</div>
+      </a>
 
       <a href="landscapes-camden.html" class="post-row" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:100px 1fr auto;gap:32px;align-items:start;padding:28px 0;border-bottom:1px solid var(--rule-lt);cursor:pointer;transition:background 0.2s;">
         <div class="post-date">May 2026</div>
