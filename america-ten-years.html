@@ -121,6 +121,17 @@ footer{background:#0f0d0a;border-top:2px solid var(--red);padding:32px 48px;disp
   footer{flex-direction:column;gap:16px;padding:28px;}
 }
 @media(max-width:700px){.article-text figure{float:none!important;width:100%!important;margin-left:0!important;margin-right:0!important;}}
+.photo-strip{clear:both;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:8px 0 6px;}
+.photo-strip img{width:100%;height:220px;object-fit:cover;display:block;border:1px solid rgba(26,18,8,0.1);}
+.photo-strip-caption{font-family:'DM Sans',system-ui,sans-serif;font-size:0.72rem;line-height:1.5;color:rgba(26,18,8,0.6);margin:0 0 28px;}
+@media(max-width:700px){.photo-strip{grid-template-columns:1fr 1fr;}.photo-strip img{height:160px;}.photo-strip img:first-child{grid-column:1/-1;height:220px;}}
+.clip{clear:both;background:#14100b;color:#f2e8cc;border-left:3px solid #c04030;padding:20px 22px 18px;margin:6px 0 30px;}
+.clip-label{font-family:'DM Sans',system-ui,sans-serif;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;font-weight:700;color:#e07a66;margin-bottom:8px;}
+.clip-quote{font-family:'Libre Baskerville',Georgia,serif;font-style:italic;font-size:1.08rem;line-height:1.5;margin-bottom:6px;}
+.clip-desc{font-family:'DM Sans',system-ui,sans-serif;font-size:0.82rem;line-height:1.5;color:rgba(242,232,204,0.75);margin-bottom:12px;}
+.clip audio{width:100%;display:block;}
+.clip-credit{font-family:'DM Sans',system-ui,sans-serif;font-size:0.7rem;color:rgba(242,232,204,0.6);margin-top:8px;}
+.clip-credit a{color:inherit;}
 </style>
 </head>
 <body>
@@ -152,7 +163,31 @@ footer{background:#0f0d0a;border-top:2px solid var(--red);padding:32px 48px;disp
       </figure>
       <p>Ten years ago this week I was in Washington editing a documentary as America came to terms with the result of the 2016 Presidential election — now I’m in New York as America is processing the result of last week’s mid-term election tsunami by the Democrats. In 2016, there was a palpable sense of shock, as polls had not predicted the outcome of a win by Donald Trump. Ten years on the polls had been predicting that the Democrats would do well, due to the unpopularity of the Iran war and its impact on inflation. Even so, there was still some shock at the scale of the Democrat wins — especially the loss of Texas.</p>
 
+      <div class="clip">
+        <div class="clip-label">Listen · Hershey, Pennsylvania · 4 November 2016</div>
+        <div class="clip-quote">“The polls missed us… I haven’t been polled, and I’m a Trump guy.”</div>
+        <div class="clip-desc">Five days before the vote, Trump supporters queuing at the Giant Center in Hershey tell the BBC the polls have it wrong.</div>
+        <audio controls preload="none" src="audio/2016-hershey-polls-missed-us.mp3"></audio>
+        <div class="clip-credit">0:45 · From <a href="america-documentaries.html#how-to-win">How to Win a US Election</a>, BBC World Service, November 2016, presented by Katty Kay.</div>
+      </div>
+
       <p>My impression in 2016 was tempered by the recent outcome of the Brexit referendum in the UK, which caught a mood of popular disenchantment with the status quo — when I vox popped people who streamed into a Donald Trump rally in Hershey, Pennsylvania, I heard similar complaints about the establishment. Ten years on, that capacity of Trump to harness that protest vote, a capacity he demonstrated again in 2024 when he defeated Kamala Harris, has been eroded by his decision to go to war and the consequences of that war on the domestic economy. As a visitor from the UK to America, the high cost of living is particularly striking today — and Trump’s handling of the economy is one of the voters’ main concerns.</p>
+
+      <div class="photo-strip">
+        <img src="photos/2016-hershey-giant-center.jpg" alt="Supporters with American flags arriving at the Giant Center in Hershey, Pennsylvania, for a Donald Trump rally in 2016." loading="lazy" style="object-position:50% 40%">
+        <img src="photos/2016-hershey-crowd.jpg" alt="Crowds lined up under floodlights outside the Trump rally in Hershey, Pennsylvania, 2016." loading="lazy">
+        <img src="photos/2016-hershey-signs.jpg" alt="Trump campaign yard signs outside the rally in Hershey, Pennsylvania, 2016, including 'Deplorables for Trump' and 'Hillary for Prison'." loading="lazy">
+      </div>
+      <div class="photo-strip-caption">Outside the Trump rally at the Giant Center, Hershey, Pennsylvania, 4 November 2016. Photos: Phil Reevell.</div>
+
+      <div class="clip">
+        <div class="clip-label">Listen · Trump supporters · November 2016</div>
+        <div class="clip-quote">“I want system change… making themselves rich and me struggling. We’re all struggling.”</div>
+        <div class="clip-desc">Voters explain what drew them to Donald Trump in 2016.</div>
+        <audio controls preload="none" src="audio/2016-system-change.mp3"></audio>
+        <div class="clip-credit">0:40 · From <a href="america-documentaries.html#how-to-win">How to Win a US Election</a>, BBC World Service, November 2016, presented by Katty Kay.</div>
+      </div>
+
 
       <figure style="margin:0 0 28px;float:left;width:42%;margin-right:28px;">
         <img src="photos/2026-11-02-reflecting-pool.jpg" alt="President Trump speaks at a podium at the Lincoln Memorial Reflecting Pool, with the Washington Monument behind him, November 2, 2026." style="width:100%;display:block;border:1px solid rgba(26,18,8,0.1)">
