@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-11-16T15:30:00Z",
+  "phase": "post-election",
+  "ballot_label": "House result",
+  "ballot": "Democrats hold 254 seats to Republicans' 166, with 15 races still undecided, going into the 120th Congress (ABC News, Nov. 10, 2026)",
+  "ballot_short": "Dem 254 · 15 uncalled",
+  "senate_label": "Senate",
+  "senate": "Democrats reach 55 seats after Scott Colom's win in Mississippi; in Alaska, Mary Peltola leads Dan Sullivan 49.9% to 46% with about 97% counted, and ranked-choice tabulation is due on Nov. 18 (Yahoo News/AP, Nov. 11; Alaska Public Media, Nov. 13–14)",
+  "approval_label": "Trump approval (polls)",
+  "approval": "32% approve, 65% disapprove in Reuters/Ipsos (Nov. 6–9); 32% approve in Economist/YouGov (Nov. 9–11); the New York Times average is 36% approve, 61% disapprove (Yahoo News, Nov. 2026)",
+  "approval_short": "32% · Reuters/Ipsos",
+  "gop_2028": "Vance, Rubio",
+  "dem_2028": "Newsom, Buttigieg, Beshear, AOC",
+  "ledger_source": "ABC News, Yahoo News/AP, Alaska Public Media, Al Jazeera and Yahoo News poll round-up, Nov. 6–14, 2026",
+  "headlines": [
+    {
+      "outlet": "Yahoo News / AP",
+      "headline": "Colom defeats Hyde-Smith in Mississippi",
+      "short": "Colom wins Mississippi, the first Democratic senator there since 1989.",
+      "summary": "Democrat Scott Colom beat Republican Sen. Cindy Hyde-Smith 49.2% to 48.7%, a race separated by 65 votes on election night; Hyde-Smith conceded on Nov. 11. Colom is Mississippi's first Democratic senator since 1989 and the first Black candidate elected to the Senate from the state in more than 140 years. Democrats now hold 55 Senate seats.",
+      "url": "https://www.yahoo.com/news/politics/article/mississippi-senate-results-scott-colom-narrowly-defeats-cindy-hyde-smith-flipping-another-seat-for-democrats-in-midterm-elections-232119638.html"
+    },
+    {
+      "outlet": "Alaska Public Media",
+      "headline": "Peltola nears 50% as Alaska's count winds down",
+      "short": "Alaska: Peltola leads Sullivan 49.9% to 46%; ranked-choice count Nov. 18.",
+      "summary": "With about 97% of the vote counted, Democrat Mary Peltola has 49.9% to Republican Sen. Dan Sullivan's 46%. Just short of a first-choice majority, the race is likely to go to ranked-choice tabulation on Nov. 18, after the deadline for overseas ballots. The Associated Press has not called it.",
+      "url": "https://alaskapublic.org/news/politics/elections/2026-11-13/peltola-leads-in-u-s-senate-race-nearing-50-mark-with-almost-all-ballots-counted"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "headline": "Stephen Miller replaces Susie Wiles as chief of staff",
+      "short": "Miller replaces Wiles as White House chief of staff after the midterm losses.",
+      "summary": "Trump named Stephen Miller White House chief of staff on Nov. 6, after Susie Wiles resigned; she moves to the Trump Political Operation. Miller, architect of the immigration crackdown, is seen as signalling a harder line for Trump's final two years. Incoming Oversight chair Robert Garcia said Democrats will keep investigating Miller.",
+      "url": "https://www.aljazeera.com/news/2026/11/6/trump-says-making-adviser-stephen-miller-white-house-chief-of-staff"
+    },
+    {
+      "outlet": "ABC News",
+      "headline": "Jim Jordan elected House Republican leader",
+      "short": "Jordan beats Scalise 106–73 to lead House Republicans in the minority.",
+      "summary": "House Republicans chose Jim Jordan as minority leader for the next Congress, 106 votes to 73 over Majority Leader Steve Scalise, after Speaker Mike Johnson said he would not run. Tom Emmer becomes minority whip. In the Senate, John Thune was re-elected Republican leader.",
+      "url": "https://abcnews.com/Politics/house-republicans-elect-jim-jordan-minority-leader-congress/story?id=138016685"
+    },
+    {
+      "outlet": "Al Jazeera",
+      "headline": "House sidelines Hegseth impeachment",
+      "short": "House votes 211–204 to send Hegseth impeachment to committee.",
+      "summary": "Republican Thomas Massie's eight articles of impeachment against Defence Secretary Pete Hegseth, over the Iran war and strikes on alleged drug boats, were referred to the Judiciary Committee by 211 votes to 204, effectively blocking a direct vote. Democrats could revive the effort when they take the House in January.",
+      "url": "https://www.aljazeera.com/news/2026/11/10/us-house-begins-vote-on-motion-to-advance-impeachment-of-pete-hegseth"
+    }
+  ],
+  "podcasts": [
+    {
+      "show": "The Rest Is Politics: US",
+      "summary": "\"Susie Wiles Out, Stephen Miller In: What is Trump Thinking?\" (Nov 9) — Katty Kay and Anthony Scaramucci on Miller's first moves as chief of staff, Trump's first interview after the midterms, and what Democrats should prioritise in Congress.",
+      "url": "https://podcasts.apple.com/gb/podcast/susie-wiles-out-stephen-miller-in-what-is-trump-thinking/id1743030473?i=1000800817439"
+    },
+    {
+      "show": "Checks and Balance (The Economist)",
+      "summary": "\"Is this the end of the Trump era?\" (Nov 6) — The Economist's US team asks whether the midterms end a decade of Trump's dominance, and how Democrats might use their new power.",
+      "url": "https://shows.acast.com/checksandbalance/episodes/is-this-the-end-of-the-trump-era"
+    }
+  ],
+  "wildcard": "Gavin Newsom says he'll decide on a 2028 run \"at the beginning of the year\" — telling Turkey's Anadolu news agency at the UN climate summit in Antalya.",
+  "week_photo": {
+    "src": "photos/2026-11-02-reflecting-pool.jpg",
+    "alt": "President Trump speaks at a podium in front of the renovated Lincoln Memorial Reflecting Pool, with the Washington Monument behind him, on November 2, 2026, the day before the midterm elections.",
+    "caption": "Trump at the Reflecting Pool, Nov 2, the day before the midterms — Official White House Photo",
+    "long_caption": "President Trump speaks about the Reflecting Pool renovation on the eve of the midterms, November 2, 2026 — Official White House Photo (P20261102JB-0208), United States Government Work",
+    "link": "https://www.flickr.com/photos/whitehouse/55630953880",
+    "position": "50% 74%"
+  }
+}

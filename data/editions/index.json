@@ -1,6 +1,12 @@
 {
   "editions": [
     {
+      "date": "2026-11-16",
+      "phase": "post-election",
+      "title": "Colom wins Mississippi; Miller replaces Wiles as chief of staff",
+      "file": "data/editions/2026-11-16.json"
+    },
+    {
       "date": "2026-11-05",
       "phase": "post-election",
       "title": "After the midterms: Democrats take the House and Senate",
