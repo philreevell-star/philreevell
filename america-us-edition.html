@@ -82,6 +82,8 @@ h1 { font-family: var(--display); font-weight:700; color: var(--parch); font-siz
 .podcast-link { color: #e07a66; text-decoration: none; border-bottom: 1px solid rgba(224,122,102,0.5); font-family: var(--sans); font-size: 0.8rem; }
 .paywall-note { color: var(--parch-mute); font-style: italic; }
 .row:last-child { border-bottom:none; }
+.row.single { grid-template-columns: 1fr; }
+.outlet-end { font-family: var(--sans); font-style: normal; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.03em; color: #9cc0e8; white-space: nowrap; }
 .outlet { font-family: var(--display); font-weight:700; font-size: 0.92rem; color: var(--parch); }
 .summary { font-family: var(--serif); font-size: 0.92rem; color: var(--parch-dim); line-height:1.6; }
 .summary a { color: #e07a66; text-decoration:none; border-bottom:1px solid rgba(192,64,48,0.5); }
@@ -175,7 +177,7 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
         <dt>Pre-election generic ballot trend, Jan–Sept 2026</dt>
         <div id="edSparkline" style="margin-top:4px;"><svg viewBox="0 0 280 56" width="240" height="48" xmlns="http://www.w3.org/2000/svg"><polyline points="6.0,42.5 50.7,13.5 95.3,28.0 140.0,24.4 184.7,22.5 229.3,18.9 274.0,18.9" fill="none" stroke="#5080b0" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><circle cx="274.0" cy="18.9" r="3" fill="#5080b0"/></svg></div>
       </div>
-      <div class="ledger-source" id="edSource">CBS News, NBC News Exit Poll, Al Jazeera, Click2Houston, Boston 25 News/AP and Magnolia Tribune election-night and day-after reporting, Nov. 3–5, 2026 · ballot trend: Silver Bulletin</div>
+      <div class="ledger-source" id="edSource">AP count via California Today (Nov. 14), Alaska Division of Elections via Newsweek (Nov. 16), Economist/YouGov via Opinion Today (Nov. 15), Reuters/Ipsos via Yahoo News (Nov. 6–9)</div>
     </dl>
   </div>
 
@@ -187,11 +189,11 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
 
   <div class="section-label">The Papers <span class="auto-tag">Auto-updated</span></div>
   <div id="edHeadlines">
-    <div class="row"><div class="outlet">CBS News</div><div class="summary">Democrats take the House; Jeffries projects 255+ seats, the biggest majority since 2009.</div></div>
-    <div class="row"><div class="outlet">Click2Houston</div><div class="summary">Talarico beats Paxton 55–43 in Texas, a 1.2 million-vote margin.</div></div>
-    <div class="row"><div class="outlet">Al Jazeera</div><div class="summary">El-Sayed beats Mike Rogers to keep Michigan's open seat Democratic.</div></div>
-    <div class="row"><div class="outlet">Boston 25 News / AP</div><div class="summary">Alaska: Peltola and Sullivan within a point; ranked-choice count Nov. 18.</div></div>
-    <div class="row"><div class="outlet">Magnolia Tribune</div><div class="summary">Mississippi: Colom leads Hyde-Smith by about 1,100 votes.</div></div>
+    <div class="row single"><div><div class="headline-clip">"Colom defeats Hyde-Smith in Mississippi" <span class="outlet-end">— Yahoo News / AP</span></div><div class="summary">Colom wins Mississippi, the first Democratic senator there since 1989.</div></div></div>
+    <div class="row single"><div><div class="headline-clip">"Peltola closes in on 50% in Alaska" <span class="outlet-end">— Newsweek</span></div><div class="summary">Alaska: Peltola leads Sullivan by 11,200 votes; ranked-choice count Nov. 18.</div></div></div>
+    <div class="row single"><div><div class="headline-clip">"Inside Stephen Miller&#x27;s first week as chief of staff" <span class="outlet-end">— CNN</span></div><div class="summary">Miller moves fast to take control as Trump&#x27;s new chief of staff.</div></div></div>
+    <div class="row single"><div><div class="headline-clip">"Jim Jordan elected House Republican leader" <span class="outlet-end">— ABC News</span></div><div class="summary">Jordan beats Scalise 106–73 to lead House Republicans in the minority.</div></div></div>
+    <div class="row single"><div><div class="headline-clip">"House sidelines Hegseth impeachment" <span class="outlet-end">— NPR</span></div><div class="summary">House votes 211–204 to send Hegseth impeachment to committee.</div></div></div>
   </div>
 
   <div class="section-label">The Podcasters <span class="auto-tag">Auto-updated</span></div>
@@ -285,12 +287,11 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       if (Array.isArray(d.headlines) && d.headlines.length) {
         const el = document.getElementById('edHeadlines');
         el.innerHTML = d.headlines.map(h => `
-          <div class="row">
-            <div class="outlet">${h.outlet}</div>
+          <div class="row single">
             <div>
-              ${h.headline ? `<div class="headline-clip">"${h.headline}"</div>` : ''}
+              ${h.headline ? `<div class="headline-clip">"${h.headline}" <span class="outlet-end">— ${h.outlet}</span></div>` : `<div class="headline-clip"><span class="outlet-end">${h.outlet}</span></div>`}
               <div class="summary">${h.summary}</div>
-              ${h.url ? `<a class="podcast-link" href="${h.url}" target="_blank" rel="noopener">Source →</a>` : `<span class="paywall-note">No public link available</span>`}
+              ${h.url ? `<a class="podcast-link" href="${h.url}" target="_blank" rel="noopener">Read the story →</a>` : `<span class="paywall-note">No public link available</span>`}
             </div>
           </div>`).join('');
       }

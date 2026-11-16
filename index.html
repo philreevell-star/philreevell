@@ -1010,9 +1010,9 @@ footer {
 }
 .america-brief-photo-caption {
   font-family: var(--sans);
-  font-size: 0.56rem;
-  color: rgba(242,232,204,0.4);
-  margin: -6px 0 10px;
+  font-size: 0.68rem;
+  color: rgba(242,232,204,0.6);
+  margin: -6px 0 14px;
   line-height: 1.4;
 }
 .headline-thumb {
@@ -1031,13 +1031,14 @@ footer {
 }
 .america-brief-line dt {
   font-family: var(--sans);
-  font-size: 0.55rem;
-  color: rgba(242,232,204,0.5);
+  font-size: 0.72rem;
+  color: rgba(242,232,204,0.65);
+  margin-bottom: 2px;
 }
 .america-brief-line dd {
   font-family: var(--display);
   font-weight: 700;
-  font-size: 0.88rem;
+  font-size: 1.15rem;
   color: var(--parch);
   margin: 0;
 }
@@ -1052,22 +1053,25 @@ footer {
 }
 .america-brief-list li {
   font-family: var(--serif);
-  font-size: 0.78rem;
-  color: rgba(242,232,204,0.65);
-  padding: 4px 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(242,232,204,0.85);
+  padding: 6px 0;
 }
-.america-brief-list b {
+.america-brief-list .src {
   font-family: var(--sans);
   font-weight: 600;
-  font-size: 0.62rem;
-  color: var(--parch);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: #7aa6d6;
+  white-space: nowrap;
 }
 .america-brief-link {
   font-family: var(--sans);
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--parch);
   text-decoration: none;
   border-bottom: 1px solid rgba(80,128,176,0.6);
@@ -1698,9 +1702,9 @@ footer {
           <div id="briefSparkline" style="margin-bottom:8px;"><svg viewBox="0 0 160 40" width="130" height="32" xmlns="http://www.w3.org/2000/svg"><polyline points="4.0,31.6 29.3,8.4 54.7,20.0 80.0,17.1 105.3,15.6 130.7,12.7 156.0,12.7" fill="none" stroke="#5080b0" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156.0" cy="12.7" r="2.4" fill="#5080b0"/></svg><div style="font-family: var(--sans); font-size: 0.52rem; color: rgba(242,232,204,0.4); letter-spacing:.05em;">Pre-election ballot trend, Jan–Sept 2026 · Silver Bulletin</div></div>
           <div class="america-brief-hr"></div>
           <ul class="america-brief-list" id="briefHeadlines">
-            <li><b>Yahoo News / AP</b> Colom wins Mississippi, the first Democratic senator there since 1989.</li>
-            <li><b>Newsweek</b> Alaska: Peltola leads Sullivan by 11,200 votes; ranked-choice count Nov. 18.</li>
-            <li><b>CNN</b> Miller moves fast to take control as Trump's new chief of staff.</li>
+            <li>Colom wins Mississippi, the first Democratic senator there since 1989. <span class="src">— Yahoo News / AP</span></li>
+            <li>Alaska: Peltola leads Sullivan by 11,200 votes; ranked-choice count Nov. 18. <span class="src">— Newsweek</span></li>
+            <li>Miller moves fast to take control as Trump's new chief of staff. <span class="src">— CNN</span></li>
           </ul>
           <div style="display:flex;flex-wrap:wrap;gap:12px 24px;align-items:baseline">
             <a class="america-brief-link" href="america-us-edition.html">Read this week's edition →</a>
@@ -1788,10 +1792,11 @@ footer {
         list.innerHTML = '';
         d.headlines.slice(0, 3).forEach(h => {
           const li = document.createElement('li');
-          const b = document.createElement('b');
-          b.textContent = h.outlet;
-          li.appendChild(b);
-          li.appendChild(document.createTextNode(' ' + (h.short || h.summary)));
+          li.appendChild(document.createTextNode((h.short || h.summary) + ' '));
+          const src = document.createElement('span');
+          src.className = 'src';
+          src.textContent = '— ' + h.outlet;
+          li.appendChild(src);
           list.appendChild(li);
         });
       }
