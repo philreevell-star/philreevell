@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-11-16T15:30:00Z",
+  "generated_at": "2026-11-16T20:45:00Z",
   "phase": "post-election",
   "ballot_label": "House result",
-  "ballot": "Democrats hold 254 seats to Republicans' 166, with 15 races still undecided, going into the 120th Congress (ABC News, Nov. 10, 2026)",
-  "ballot_short": "Dem 254 · 15 uncalled",
+  "ballot": "Democrats have won 256 seats to Republicans' 169, with 10 races still uncalled — 38 above the 218 needed for a majority (AP count as of Nov. 14, via California Today)",
+  "ballot_short": "Dem 256 · 10 uncalled",
   "senate_label": "Senate",
-  "senate": "Democrats reach 55 seats after Scott Colom's win in Mississippi; in Alaska, Mary Peltola leads Dan Sullivan 49.9% to 46% with about 97% counted, and ranked-choice tabulation is due on Nov. 18 (Yahoo News/AP, Nov. 11; Alaska Public Media, Nov. 13–14)",
+  "senate": "Democrats hold 55 seats after Scott Colom's win in Mississippi (AP, Nov. 11). In Alaska, Mary Peltola leads Dan Sullivan 49.94% to 45.96%, about 11,200 votes, just short of a majority; ranked-choice tabulation is due on Nov. 18 (Alaska Division of Elections results, via Newsweek, Nov. 16)",
   "approval_label": "Trump approval (polls)",
-  "approval": "32% approve, 65% disapprove in Reuters/Ipsos (Nov. 6–9); 32% approve in Economist/YouGov (Nov. 9–11); the New York Times average is 36% approve, 61% disapprove (Yahoo News, Nov. 2026)",
-  "approval_short": "32% · Reuters/Ipsos",
+  "approval": "36% approve, 61% disapprove among registered voters in this week's Economist/YouGov poll, tied for his lowest in either term (YouGov, via Opinion Today, Nov. 15). Reuters/Ipsos had 32% approve, 65% disapprove (Nov. 6–9)",
+  "approval_short": "36% · Economist/YouGov",
   "gop_2028": "Vance, Rubio",
   "dem_2028": "Newsom, Buttigieg, Beshear, AOC",
-  "ledger_source": "ABC News, Yahoo News/AP, Alaska Public Media and Yahoo News poll round-up, Nov. 10–14, 2026",
+  "ledger_source": "AP count via California Today (Nov. 14), Alaska Division of Elections via Newsweek (Nov. 16), Economist/YouGov via Opinion Today (Nov. 15), Reuters/Ipsos via Yahoo News (Nov. 6–9)",
   "headlines": [
     {
       "outlet": "Yahoo News / AP",
@@ -21,11 +21,11 @@
       "url": "https://www.yahoo.com/news/politics/article/mississippi-senate-results-scott-colom-narrowly-defeats-cindy-hyde-smith-flipping-another-seat-for-democrats-in-midterm-elections-232119638.html"
     },
     {
-      "outlet": "Alaska Public Media",
-      "headline": "Peltola nears 50% as Alaska's count winds down",
-      "short": "Alaska: Peltola leads Sullivan 49.9% to 46%; ranked-choice count Nov. 18.",
-      "summary": "With about 97% of the vote counted, Democrat Mary Peltola has 49.9% to Republican Sen. Dan Sullivan's 46%. Just short of a first-choice majority, the race is likely to go to ranked-choice tabulation on Nov. 18, after the deadline for overseas ballots. The Associated Press has not called it.",
-      "url": "https://alaskapublic.org/news/politics/elections/2026-11-13/peltola-leads-in-u-s-senate-race-nearing-50-mark-with-almost-all-ballots-counted"
+      "outlet": "Newsweek",
+      "headline": "Peltola closes in on 50% in Alaska",
+      "short": "Alaska: Peltola leads Sullivan by 11,200 votes; ranked-choice count Nov. 18.",
+      "summary": "The latest Alaska Division of Elections figures give Democrat Mary Peltola 140,637 first-choice votes (49.94%) to Republican Sen. Dan Sullivan's 129,424 (45.96%), a lead of 11,213, leaving her just short of a majority. If no one passes 50%, ranked-choice tabulation begins on Nov. 18. The AP has not called the race; it estimated 97% of the vote counted on Sunday.",
+      "url": "https://www.yahoo.com/news/politics/articles/mary-peltola-closes-50-threshold-034142999.html"
     },
     {
       "outlet": "CNN",
