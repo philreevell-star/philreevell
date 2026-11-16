@@ -128,6 +128,9 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
 .ed-date { font-family: var(--sans); font-size: 0.78rem; font-weight:600; color: #9cc0e8; width: 9.5em; flex-shrink:0; }
 .ed-title { font-family: var(--serif); font-size: 1rem; line-height:1.45; }
 .ed-current { font-family: var(--sans); font-size: 0.62rem; letter-spacing:.1em; text-transform:uppercase; color: var(--parch-dim); border:1px solid rgba(242,232,204,0.25); padding:1px 6px; border-radius:2px; margin-left:8px; white-space:nowrap; }
+.context-text { font-family: var(--serif); font-size: 1.02rem; line-height: 1.7; color: var(--parch); }
+.context-sources { font-family: var(--sans); font-size: 0.72rem; color: var(--parch-dim); margin-top: 10px; line-height:1.6; }
+.context-sources a { color: #e07a66; text-decoration: none; border-bottom: 1px solid rgba(224,122,102,0.4); }
 </style>
 </head>
 <body>
@@ -174,6 +177,12 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
       </div>
       <div class="ledger-source" id="edSource">CBS News, NBC News Exit Poll, Al Jazeera, Click2Houston, Boston 25 News/AP and Magnolia Tribune election-night and day-after reporting, Nov. 3–5, 2026 · ballot trend: Silver Bulletin</div>
     </dl>
+  </div>
+
+  <div id="edContextWrap" style="display:none">
+    <div class="section-label">The Week in America</div>
+    <p class="context-text" id="edContext"></p>
+    <div class="context-sources" id="edContextSources"></div>
   </div>
 
   <div class="section-label">The Papers <span class="auto-tag">Auto-updated</span></div>
@@ -263,6 +272,16 @@ footer.foot { margin-top: 44px; padding-top: 18px; border-top: 1px solid rgba(24
         cap.textContent = ''; const a = document.createElement(d.week_photo.link ? 'a' : 'span'); if (d.week_photo.link) { a.href = d.week_photo.link; a.target = '_blank'; a.rel = 'noopener'; a.style.color = 'inherit'; } a.textContent = txt; cap.appendChild(a);
       }
 
+      // Context: the week's wider US news, shown only when the edition has it.
+      if (d.context) {
+        document.getElementById('edContext').textContent = d.context;
+        const cs = document.getElementById('edContextSources'); cs.textContent = '';
+        (d.context_sources || []).forEach((c, i) => {
+          if (i) cs.appendChild(document.createTextNode(' · '));
+          const a = document.createElement('a'); a.href = c.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = c.label; cs.appendChild(a);
+        });
+        document.getElementById('edContextWrap').style.display = '';
+      }
       if (Array.isArray(d.headlines) && d.headlines.length) {
         const el = document.getElementById('edHeadlines');
         el.innerHTML = d.headlines.map(h => `

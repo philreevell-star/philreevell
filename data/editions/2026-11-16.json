@@ -11,7 +11,7 @@
   "approval_short": "32% · Reuters/Ipsos",
   "gop_2028": "Vance, Rubio",
   "dem_2028": "Newsom, Buttigieg, Beshear, AOC",
-  "ledger_source": "ABC News, Yahoo News/AP, Alaska Public Media, Al Jazeera and Yahoo News poll round-up, Nov. 6–14, 2026",
+  "ledger_source": "ABC News, Yahoo News/AP, Alaska Public Media and Yahoo News poll round-up, Nov. 10–14, 2026",
   "headlines": [
     {
       "outlet": "Yahoo News / AP",
@@ -28,11 +28,11 @@
       "url": "https://alaskapublic.org/news/politics/elections/2026-11-13/peltola-leads-in-u-s-senate-race-nearing-50-mark-with-almost-all-ballots-counted"
     },
     {
-      "outlet": "Al Jazeera",
-      "headline": "Stephen Miller replaces Susie Wiles as chief of staff",
-      "short": "Miller replaces Wiles as White House chief of staff after the midterm losses.",
-      "summary": "Trump named Stephen Miller White House chief of staff on Nov. 6, after Susie Wiles resigned; she moves to the Trump Political Operation. Miller, architect of the immigration crackdown, is seen as signalling a harder line for Trump's final two years. Incoming Oversight chair Robert Garcia said Democrats will keep investigating Miller.",
-      "url": "https://www.aljazeera.com/news/2026/11/6/trump-says-making-adviser-stephen-miller-white-house-chief-of-staff"
+      "outlet": "CNN",
+      "headline": "Inside Stephen Miller's first week as chief of staff",
+      "short": "Miller moves fast to take control as Trump's new chief of staff.",
+      "summary": "In his first week replacing Susie Wiles, Stephen Miller moved to consolidate control of the White House and signalled changes to procedures and personnel. Two memos, presented as empowering Cabinet secretaries and limiting lobbyists, were widely read as criticism of how Wiles ran the first two years. CNN's reporting, summarised by Political Wire.",
+      "url": "https://politicalwire.com/2026/11/14/inside-stephen-millers-first-week-as-trumps-chief-of-staff/"
     },
     {
       "outlet": "ABC News",
@@ -42,11 +42,11 @@
       "url": "https://abcnews.com/Politics/house-republicans-elect-jim-jordan-minority-leader-congress/story?id=138016685"
     },
     {
-      "outlet": "Al Jazeera",
+      "outlet": "NPR",
       "headline": "House sidelines Hegseth impeachment",
       "short": "House votes 211–204 to send Hegseth impeachment to committee.",
-      "summary": "Republican Thomas Massie's eight articles of impeachment against Defence Secretary Pete Hegseth, over the Iran war and strikes on alleged drug boats, were referred to the Judiciary Committee by 211 votes to 204, effectively blocking a direct vote. Democrats could revive the effort when they take the House in January.",
-      "url": "https://www.aljazeera.com/news/2026/11/10/us-house-begins-vote-on-motion-to-advance-impeachment-of-pete-hegseth"
+      "summary": "Republican Thomas Massie's articles of impeachment against Defense Secretary Pete Hegseth, over the Iran war, strikes on alleged drug boats, the capture of Nicolás Maduro without congressional approval and the move against Sen. Mark Kelly, were referred to committee by 211 votes to 204, effectively ending the effort this session. Hakeem Jeffries, expected to be the next Speaker, said Hegseth \"has got to go\".",
+      "url": "https://www.kpbs.org/news/politics/2026/11/10/house-votes-to-effectively-end-the-impeachment-effort-against-pete-hegseth"
     }
   ],
   "podcasts": [
@@ -69,5 +69,24 @@
     "long_caption": "President Trump speaks about the Reflecting Pool renovation on the eve of the midterms, November 2, 2026 — Official White House Photo (P20261102JB-0208), United States Government Work",
     "link": "https://www.flickr.com/photos/whitehouse/55630953880",
     "position": "50% 74%"
-  }
+  },
+  "context": "A week of disruption beyond Washington politics. On Friday 13 November the FAA halted every departure in the country for more than four hours after radar and communications failures; Transportation Secretary Sean Duffy blamed outdated equipment and asked Congress for billions to modernise air traffic control, and Democrats promised hearings. A day earlier Jensen Huang resigned as chief executive of Nvidia, the chipmaker at the centre of the AI boom, after the board began investigating reports that he had been the target of a foreign intelligence effort; finance chief Colette Kress is interim CEO. And on Thursday 19 November Trump is due to meet Xi Jinping and Vladimir Putin at the APEC summit in Shenzhen, China, the first formal three-way meeting of US, Chinese and Russian leaders, with nuclear arms and the Iran war on the agenda.",
+  "context_sources": [
+    {
+      "label": "ABC News: nationwide ground stop",
+      "url": "https://abcnews.com/US/nationwide-ground-stop-ordered-airports-faa/story?id=138121848"
+    },
+    {
+      "label": "Nvidia: CEO transition announcement",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+    },
+    {
+      "label": "AP via WOWT: Nvidia investigation",
+      "url": "https://www.wowt.com/2026/11/09/nvidia-investigates-whether-ceo-jensen-huang-was-targeted-by-chinese-spy-with-whom-he-had-an-affair/?outputType=amp"
+    },
+    {
+      "label": "CBS News: Trump, Xi and Putin to meet",
+      "url": "https://www.cbsnews.com/news/trump-putin-xi-jinping-meeting-china-us-russia-talks/"
+    }
+  ]
 }
